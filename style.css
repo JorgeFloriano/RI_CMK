@@ -40,13 +40,13 @@ table, td, th, tr  {
     border:1px solid black;
 }
 /* .w3-striped tbody tr:nth-child(even){ 
-    background-color:#f1f1f1
+    background-color:#ececf8
 }
 table tr:nth-child(odd) {
     background-color:#fff
 }
 table tr:nth-child(even){
-    background-color:#f1f1f1
+    background-color:#ececf8
 } */
 .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover {
     background-color:#ccc
@@ -54,9 +54,10 @@ table tr:nth-child(even){
     text-align:center
 }
 table th {
-    padding:2px 2px;
+    padding:0px 2px;
     display:table-cell;
-    vertical-align:top
+    vertical-align:top;
+    background-color:#ececf8;
 }
 
 table td {
