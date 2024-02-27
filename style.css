@@ -2,31 +2,41 @@
     margin:0;
     padding: 0;
 }
-body {
-   background-color:white;
-}
 header {
-    background-color: white;
+    display: inline;
     width: 750px;
     border-top:1px solid black;
     border-right:1px solid black;
     border-left:1px solid black;
     margin: auto;
     margin-top: 10px;
-}
-div#logo {
     height: 50px;
     padding: 5px;
 }
-div#instr {
-    text-align: center;
-    font-weight: bold
+
+main {
+    width: 750px;
+    margin: auto;
 }
-div#RI {
-    margin: 8px;
+footer {
+    display: inline;
+    width: 750px;
+    border:1px solid black;
+    margin: auto;
+    margin-top: 5px;
+    height: 30px;
+    padding: 5px;
+}
+span#instr {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+span#RI {
     text-align: right;
     font-size: 17px;
-    font-weight: bold
+    font-weight: bold;
+    margin-top: 8px;
 }
 table { 
     border-collapse:collapse;
@@ -39,6 +49,9 @@ table {
 table, td, th, tr  {
     border:1px solid black;
 }
+/* table.w3-half {
+    width: 375;
+} */
 /* .w3-striped tbody tr:nth-child(even){ 
     background-color:#ececf8
 }
@@ -65,16 +78,7 @@ table td {
     display:table-cell;
     vertical-align:top
 }
-main {
-    background-color: white;
-    width: 430px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.529);
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+
 .center {
     position: absolute;
     background-color: white;
