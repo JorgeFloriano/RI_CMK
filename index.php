@@ -33,9 +33,9 @@
                     </tr>
                 </thead>
             </table>
-            <table style="margin-top: 5px;">
+            <table style="margin-top: 5px;border-bottom: hidden">
                 <thead>
-                    <tr><th colspan="3" style="width: 49.7%;">INSPEÇÃO MECÂNICA</th><th colspan="3">INSPEÇÃO ELÉTRICA</th></tr>
+                    <tr><th colspan="3" style="width: 49.8%;">INSPEÇÃO MECÂNICA</th><th colspan="3">INSPEÇÃO ELÉTRICA</th></tr>
                     <tr><th colspan="2">TROLE</th><th style="width: 10%;">Cap:500 kg</th><th colspan="2">TALHA</th><th style="width: 10%;"></th></tr>
                 </thead>
                 <tbody>
@@ -79,7 +79,7 @@
                 </tbody>
             </table>
             <section id="medicoes">
-                <table class="half">
+                <table class="half" style="border-right: hidden;">
                     <thead>
                         <tr><th colspan="6">MEDIÇÕES DA CORRENTE DE CARGA</th></tr>
                         <tr><th colspan="3" rowspan="2" style="width: 55%;">NORMA TÉCNICA <br> NBR 1292/1990</th><th colspan="3">Medidas conforme a norma</th></tr>
@@ -109,21 +109,35 @@
                         <tr><td>67</td><td colspan="2">Tensão de rede (V)</td><td>440</td><td>442</td></tr>
                         <tr><td>68</td><td colspan="2">Tensão do transformador de comando (VCA)</td><td>24</td><td>24,5</td></tr>
                         <tr><td>69</td><td colspan="2">Medição do banco de resistências (Ohms)</td><td>Ñ aplica</td><td>Ñ aplica</td></tr>
-                        <tr><td rowspan="3">70</td><td rowspan="3">MOTOR DE <br> DIREÇÃO</td><td>Corrente da alta (A)</td><td>1,0</td><td>0,7</td></tr>
+                        <tr><td rowspan="3">70</td><th rowspan="3">MOTOR DE <br> DIREÇÃO</th><td>Corrente da alta (A)</td><td>1,0</td><td>0,7</td></tr>
                         <tr><td>Corrente da baixa (A)</td><td>1,0</td><td>0,5</td></tr>
                         <tr><td>Tensão do freio (VCC)</td><td>Ñ Insp.</td><td>Ñ Insp.</td></tr>
-                        <tr><td rowspan="3">71</td><td rowspan="3">MOTOR DE <br> ELEVAÇÃO</td><td>Corrente da alta (A)</td><td>1,8</td><td>1,2</td></tr>
+                        <tr><td rowspan="3">71</td><th rowspan="3">MOTOR DE <br> ELEVAÇÃO</th><td>Corrente da alta (A)</td><td>1,8</td><td>1,2</td></tr>
                         <tr><td>Corrente da baixa (A)</td><td>2,8</td><td>1,5</td></tr>
                         <tr><td>Tensão do freio (VCC)</td><td>Ñ Insp.</td><td>Ñ Insp.</td></tr>
                     </tbody>
                 </table>
             </section>
-            <table>
+            <section id="status">
+                <div id="status1">STATUS FINAL DA INSPEÇÃO: RESTAM PENDÊNCIAS</div>
+                <div id="status2">EQUIPAMENTO APTO PARA OPERAR: SIM COM RESSALVAS</div>
+            </section>
+            <section id="ressalvas">
+                <strong>Ressalvas:</strong> Contator apresenta defeito, necessário providenciar peça para fazer o reparo
+            </section>
+            <table style="border-top: hidden;">
                 <thead>
-                    <tr><th>div</th></tr>
-                    <tr><th>div</th></tr>
+                    <tr><th colspan="6">Apontamento de Horas e relação dos técnicos</th></tr>
+                    <tr><th style="width: 10%;">Data</th><th style="width: 10%;">H. Início</th><th style="width: 10%;">H. Término</th><th style="width: 25%;">Nome do Técnico</th><th style="width: 25%;">Função</th><th>Visto do Técnico</th></tr>
                 </thead>
+                <tbody>
+                    <tr><td>29/02/2024</td><td>14:00</td><td>16:00</td><td>Jorge Luis</td><td>Téc. Manutenção</td><td>Assinatura</td></tr>
+                    <tr><td>29/02/2024</td><td>14:00</td><td>16:00</td><td>Floriano Silva</td><td>Téc. Manutenção</td><td>Assinatura</td></tr>
+                </tbody>
             </table>
+            <section id="cliente">
+                <strong>Cliente:</strong> 
+            </section>
         </main>
     </section>
 </body>

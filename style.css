@@ -1,5 +1,5 @@
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -8,14 +8,10 @@
       min-height: auto;
       min-width: 780px;
   }
-  main {
-    height: 100vh;
-  }
   section#relatorio {
-    width:750px;
+    width:770px;
     margin: auto;
-    margin-top:10px;
-    margin-bottom:10px;
+    padding:10px;
   }
   header {
       display: inline;
@@ -50,19 +46,44 @@
     float: left;
     width: 50%;
   }
-  footer {
-      display: inline;
-      border:1px solid black;
-      margin: auto;
-      margin-top: 5px;
-      height: 30px;
-      padding: 5px;
+
+  section#status {
+    font-size: 10.5px;
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
   }
-  
+  div#status1 {
+    float: left;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 49.99%;
+    padding: 2px;
+  }
+  div#status2 {
+    float: left;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 50.01%;
+    padding: 2px;
+  }
+  section#ressalvas {
+    border: 1px solid black;
+    padding: 2px;
+  }
+  section#cliente {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding: 5px;
+    font-size: 17px;
+    height: 80px;
+  }
   table { 
       border-collapse:collapse;
       border-spacing:0;
-      font-size: 11px;
+      font-size: 10.5px;
       width: 100%;
       display:table;
       margin: auto;
@@ -90,121 +111,14 @@
   table th {
       padding:0px 2px;
       display:table-cell;
-      vertical-align:top;
+     
       background-color:#ececf8;
   }
   
   table td {
       padding:0px 2px;
       display:table-cell;
-      vertical-align:top
+     
   }
   
-  .center {
-      position: absolute;
-      background-color: white;
-      width: 300px;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.529);
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%)
-  }
   
-  select.search {
-      border: none;
-      padding: 2px 2px;
-      background-color: inherit;
-    }
-  select.search:focus {
-      box-shadow: 0 0 0 0;
-      border: none;
-      outline: 0;
-  }
-  input, select, option {
-      width: 100%;
-      border:1px solid #636161;
-      border-radius:5px;
-      padding: 0px 5px;
-  }
-  
-  .texto {
-      text-align: justify;
-      margin: 1%;
-      color: black;
-  }
-  
-  button {
-      font-weight: bold;
-      color: white;
-      background-color: rgb(55, 20, 126);
-      padding: 1px 10px;
-      margin:10px 10px 10px 0px;
-      border-radius: 5px;
-      cursor: pointer;
-  }
-  button:hover{color:#000!important;background-color:#ccc!important}
-  legend {
-      text-align:left;
-      font-style: oblique;
-      color: rgb(99, 5, 117);
-  }
-  input::placeholder,textarea::placeholder{
-      color:rgb(197, 195, 195)
-  }
-  
-  div.gerQtd {
-      align-items: baseline;
-      padding: 0px;
-      margin: 0px;
-  }
-  .qtd {
-      height: 20px;
-      width:50px;
-  }
-  /* input[type=number]::-webkit-inner-spin-button, 
-  input[type=number]::-webkit-outer-spin-button { 
-      -webkit-appearance: none;
-  } */
-      
-  button.a, button.b {
-      width: 20px;
-      border-radius:0px;
-      height: 20px;
-      margin:0px;
-      color: black;
-      border: 1px solid black;
-      background-color: white;
-      cursor: pointer;
-  }
-  #alert {
-      background-color: #f1bcbc;
-      text-align: center;
-      border:1px solid #9b0404;
-      border-radius: 5px;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.529);
-  }
-   a {
-      margin-right: 10px;
-      color: rgb(55, 20, 126);
-  }
-  button.link, button.link:hover {
-      padding: 0px;
-      margin: 0px 5px 0px 0px;
-      text-decoration: underline;
-      color: rgb(55, 20, 126);
-      background-color: transparent !important;
-      border: none;
-  }
-  i.link {
-      padding: 0px;
-      margin: 0px;
-      color: rgb(55, 20, 126);
-      background-color: transparent !important;
-      border: none;
-      cursor: pointer;
-  }
-  h2 {
-      margin-top: 0px;
-  }
