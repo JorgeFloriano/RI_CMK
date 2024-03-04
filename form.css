@@ -16,7 +16,7 @@ gelo #EFEEEC
 }
   body, html {
       min-height: auto;
-      min-width: 420px;
+      min-width: 450px;
       background-color: rgb(227, 222, 222);
       font-size: 12px;
   }
@@ -109,12 +109,22 @@ div.opt {
   color: rgb(198, 194, 194);
   float: right;
   width: 100px;
-  margin: 5px;
+  margin: 2px;
+  padding: 2px;
   vertical-align: auto;
 }
 
 table.med, table.med > th {
   text-align: left;
+}
+table.med {
+  height: 80px;
+}
+
+.motor {
+  text-align: center;
+  border:2px solid rgb(105, 111, 196);
+  border-radius: 5px;
 }
 
 .btn {

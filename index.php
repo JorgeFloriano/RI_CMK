@@ -103,7 +103,7 @@
                 </section>
                 <section class="ask">
                     <div class="lab"><label for="id15">15-Teste de carga (kg)</label></div>
-                    <div class="opt"><input style="width: 90px;height: 17px" min="0" type="number" name="txt15" id="id15"></div>
+                    <div class="opt"><input style="width: 90px;height: 20px" min="0" type="number" name="txt15" id="id15"></div>
                 </section>
 
                 <section id="trole" class="element">
@@ -140,17 +140,19 @@
                     <?php opt('21')?>
                 </section>
                 <section class="ask" style="height: 50px;">
-                    <div class="lab"><label>22-Amassamentos, estrias, fissuras, respingos de solda, corrosão ou deformação elo a elo</label></div>
+                    <div class="lab"><label><p>22-Amassamentos, estrias, fissuras, respingos de solda, corrosão ou deformação elo a elo</p></label></div>
                     <?php opt('22')?>
                 </section>
                 <section class="ask" style="height: 50px;">
-                    <div class="lab"><label>23-Montagem (verificar se a corrente não está torcida ou com a solda invertida) </label></div>
+                    <div class="lab"><label><p>23-Montagem (verificar se a corrente não está torcida ou com a solda invertida) </p></label></div>
                     <?php opt('23')?>
                 </section>
                 <section class="ask" style="height: 70px;">
-                    <div class="lab"><label>24-Pino de fixação (se houver fissura,
-                         deformação ou desgaste visível,
-                         o mesmo deve ser substituido) </label></div>
+                    <div class="lab"><label><p>
+                        24-Pino de fixação (se houver fissura,
+                             deformação ou desgaste visível,
+                             o mesmo deve ser substituido)
+                    </p></label></div>
                     <?php opt('24')?>
                 </section>
 
@@ -187,28 +189,304 @@
                     MEDIÇÕES DA CORRENTE DE CARGA (mm)
                 </section>
 
-                <section class="ask" style="height: 75px;padding:5px;">
+                <section class="ask" style="height: 90px;padding:5px;">
                     <table class="med">
                         <tr>
-                            <th style="width: 66.5%;">NORMA TÉCNICA NBR 1292/1990</th>
-                            <th style="width: 10%;">Nom.</th>
-                            <th style="width: 10%;">Lim.</th>
-                            <th>Med.</th>
+                            <th style="width: 60%;">NORMA TÉCNICA NBR 1292/1990</th>
+                            <th style="width: 15%;">Nominal</th>
+                            <th style="width: 13%;">Limite</th>
+                            <th>Medido</th>
                         </tr>
                         <tr>
                             <td>31-Alongamento - Medida de 11 elos</td>
                             <td>248</td>
                             <td>253</td>
-                            <td><input style="width: 50px;height: 17px" min="248.0" step="0.1" type="number" name="txt31" id="id31"></td>
+                            <td><input style="width: 48px;height: 20px" min="248.0" step="0.1" type="number" name="txt31" id="id31"></td>
                         </tr>
                         <tr>
                             <td>32-Medida DM-Diâmetro médio do elo</td>
-                            <td>7,4</td>
-                            <td>6,7</td>
-                            <td><input style="width: 50px;height: 17px;" step="0.1" min="0" max="7.4" type="number" name="txt32" id="id32"></td>
+                            <td>7.4</td>
+                            <td>6.7</td>
+                            <td><input style="width: 48px;height: 20px;" step="0.1" min="0" max="7.4" type="number" name="txt32" id="id32"></td>
                         </tr>
                     </table>
                 </section>
+
+                <section id="trole" class="element">
+                    MEDIÇÕES DO GANCHO INFERIOR (mm)
+                </section>
+
+                <section class="ask" style="height: 115px;padding:5px;">
+                    <table class="med" style="height: 105px;">
+                        <tr>
+                            <th style="width: 60%;" colspan="2">NORMA TÉCNICA NBR 10070/1987</th>
+                            <th style="width: 15%;">Nominal</th>
+                            <th style="width: 13%;">Limite</th>
+                            <th>Medido</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Figura do gancho</td>
+                            <td>33-Medida W1</td>
+                            <td>41</td>
+                            <td>45.1</td>
+                            <td><input style="width: 48px;height: 20px" min="41.0" step="0.1" type="number" name="txt33" id="id31"></td>
+                        </tr>
+                        <tr>
+                            <td>34-Medida Y</td>
+                            <td>28</td>
+                            <td>23.6</td>
+                            <td><input style="width: 48px;height: 20px;" step="0.1" min="0" max="28.0" type="number" name="txt34" id="id32"></td>
+                        </tr>
+                        <tr>
+                            <td>35-Alinhamento</td>
+                            <td>
+                                <label for="35_Ok">Ok </label><input type="radio" name="txt35" id="35_Ok" value="Alinhamento Ok">
+                            </td>
+                            <td colspan="2">
+                                <label for="35_T">Substituir </label><input type="radio" name="txt35" id="35_T" value="Desalinhado, substituir gancho">
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="insp" class="insp">
+                    INSPEÇÃO ELÉTRICA
+                </section>
+
+                <section id="trole" class="element">
+                    TALHA
+                </section>
+
+                <section class="ask">
+                    <div class="lab"><label>36-Fixação do painel, tampa e limpeza </label></div>
+                    <?php opt('36')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>37-Chave geral, fusíveis e disjuntores </label></div>
+                    <?php opt('37')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>38-Motores (medições e aquecimento) </label></div>
+                    <?php opt('38')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>39-Caixa de ligação </label></div>
+                    <?php opt('39')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>40-Cabo de alimentação </label></div>
+                    <?php opt('40')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>41-Prensa cabos </label></div>
+                    <?php opt('41')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>42-Tomadas de engate rápido </label></div>
+                    <?php opt('42')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>43-Contatores e contatos </label></div>
+                    <?php opt('43')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>44-Trafos de potência e comando </label></div>
+                    <?php opt('44')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>45-Bornes e terminais </label></div>
+                    <?php opt('45')?>
+                </section>
+
+                <section id="trole" class="element">
+                    BOTOEIRA
+                </section>
+
+                <section class="ask">
+                    <div class="lab"><label>48-Funcionamento do botões </label></div>
+                    <?php opt('48')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>49-Cabo elétrico e prensa cabo </label></div>
+                    <?php opt('49')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>50-Cabo de aço de sustentação e fixação </label></div>
+                    <?php opt('50')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>51-Caixa de conexão </label></div>
+                    <?php opt('51')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>52-Carcaça e identificão dos botões </label></div>
+                    <?php opt('52')?>
+                </section>
+
+                <section id="trole" class="element">
+                    ELETRIFICAÇÃO TRANSVERSAL
+                </section>
+
+                <section class="ask">
+                    <div class="lab"><label>53-Fixação e conservação dos cabos </label></div>
+                    <?php opt('53')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>54-Estado do perfil, fixações e emendas </label></div>
+                    <?php opt('54')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>55-Carros porta cabos e arrastador </label></div>
+                    <?php opt('55')?>
+                </section>
+
+                <section id="trole" class="element">
+                    RÁDIO CONTROLE
+                </section>
+
+                <section class="ask">
+                    <div class="lab"><label>56-Funcionamento e estado do emissor </label></div>
+                    <?php opt('56')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>57-Reaperto de todas as conexões e ligações </label></div>
+                    <?php opt('57')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>58-Estado de conservação da carcaça do rádio </label></div>
+                    <?php opt('58')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>59-Estado da bateria / pilhas do emissor </label></div>
+                    <?php opt('59')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>60-Sinais luminosos do receptor e transmissor </label></div>
+                    <?php opt('60')?>
+                </section>
+
+                <section id="trole" class="element">
+                    LIMITE DE FIM DE CURSO - Elevação
+                </section>
+
+                <section class="ask">
+                    <div class="lab"><label>61-Funcionamento da chave limite </label></div>
+                    <?php opt('61')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>62-Cabos ou corrente do pino </label></div>
+                    <?php opt('62')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>63-Contatos, molas e articulação </label></div>
+                    <?php opt('63')?>
+                </section>
+
+                <section id="trole" class="element">
+                    LIMITE DE FIM DE CURSO - Direção
+                </section>
+
+                <section class="ask">
+                    <div class="lab"><label>64-Funcionamento da chave limite </label></div>
+                    <?php opt('64')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>65-Cabos ou corrente do pino </label></div>
+                    <?php opt('65')?>
+                </section>
+                <section class="ask">
+                    <div class="lab"><label>66-Contatos, molas e articulação </label></div>
+                    <?php opt('66')?>
+                </section>
+
+                <section id="trole" class="element">
+                    MEDIÇÕES DAS GRANDEZAS ELÉTRICAS
+                </section>
+
+                <section class="ask" style="height: 277px;padding:5px;">
+                    <table class="med" style="height: 270px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 73%;" colspan="3">VALORES CONSIDERADOS</th>
+                            <th style="width: 15%;">Nominal</th>
+                            <th>Medido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>67-</td>
+                            <td colspan="2">Tensão de rede (V)</td>
+                            <td>440</td>
+                            <td>
+                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt67" id="id67">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>68-</td>
+                            <td colspan="2">Tensão do trafo de comando (VCA)</td>
+                            <td>24</td>
+                            <td>
+                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt68" id="id68">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>69-</td>
+                            <td colspan="2">Medição do banco de resistências (Ohms)</td>
+                            <td>Ñ aplica</td>
+                            <td>
+                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt69" id="id69">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">70-</td>
+                            <th rowspan="3" class="motor" >MOTOR DE <br> DIREÇÃO</th>
+                            <td>Corrente da alta (A)</td>
+                            <td>1.0</td>
+                            <td>
+                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt70" id="id70">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Corrente da baixa (A)</td>
+                            <td>1.0</td>
+                            <td>
+                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt70_2" id="id70_2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tensão do freio (VCC)</td>
+                            <td>Ñ Insp.</td>
+                            <td>
+                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt70_3" id="id70_3">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">71-</td>
+                            <th rowspan="3" class="motor" >MOTOR DE <br> ELEVAÇÃO</th>
+                            <td>Corrente da alta (A)</td>
+                            <td>1.8</td>
+                            <td>
+                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt71" id="id71">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Corrente da baixa (A)</td>
+                            <td>2.8</td>
+                            <td>
+                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt71_2" id="id71_2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tensão do freio (VCC)</td>
+                            <td>Ñ Insp.</td>
+                            <td>
+                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt71_3" id="id71_3">
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </section>
+
                 <button type="submit" class="btn">CONFIRMA</button>
             </form>
         </main>
