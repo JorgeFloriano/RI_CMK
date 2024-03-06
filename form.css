@@ -21,7 +21,7 @@ gelo #EFEEEC
       font-size: 12px;
   }
   section#form {
-    width:420px;
+    width:450px;
     margin: auto;
     padding:10px;
   }
@@ -38,22 +38,23 @@ gelo #EFEEEC
     font-size: 12px;
   }
   div#header1 {
-      float: left;
-      width: 100px;
+    float: left;
+    width: 115px;
   }
   div#header2 {
-      float: left;
-      text-align: center;
-      font-weight: bold;
-      font-size: 12px;
-  }
-  div#header3 {
-      float: right;
-      text-align: right;
-      font-size: 15px;
-      font-weight: bold;
-      margin-top: 8px;
-  }
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 4px;
+}
+div#header3 {
+  float: right;
+  text-align: right;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+}
 
   section#info {
       border:2px solid rgb(41, 50, 184);
@@ -73,13 +74,13 @@ i.iconl {
 }
 section.insp {
     background-color:rgb(41, 50, 184);
-      text-align: center;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 12px;
-      color: white;
-      padding: 5px;
-      margin: 3px 0;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    padding: 5px;
+    margin: 3px 0;
 }
 
 section.element {
@@ -96,22 +97,23 @@ section.ask {
   background-color: white;
   border-radius: 5px;
   font-size: 12px;
-  height: 30px;
-  padding: 1px;
-  margin: 3px 0;
+  height: auto;
+  padding: 8px 2px 3px 5px;
+  margin: 2px 0;
+  width: 100%;
+  display: inline-flex;
 }
   div.lab {
-    float: left;
-    margin: 5px;
-    width: 250px;
+    width: 356px;
 }
 div.opt {
   color: rgb(198, 194, 194);
-  float: right;
-  width: 100px;
-  margin: 2px;
-  padding: 2px;
-  vertical-align: auto;
+  width: 69px;
+}
+
+input.medido {
+  width: 48px;
+  height: 20px
 }
 
 table.med, table.med > th {
@@ -146,4 +148,52 @@ table.med {
   -webkit-font-smoothing: antialiased;
   margin-right: 4px;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.input,
+.textarea {
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1px 6px;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 20px;
+  line-height: 20px;
+}
+
+.textarea[contenteditable]:empty::before {
+  content: "Ex:Funcionando somente a velocidade baixa na translação";
+  color: gray;
+}
+
+section.obs {
+  background-color: white;
+  border-radius: 0px 0px 5px 5px;
+  font-size: 12px;
+  height: auto;
+  padding: 8px 2px 3px 5px;
+  margin: 0;
+  width: 100%;
+  display: inline-block;
+}
+
+textarea {  
+  border-color: rgb(105, 111, 196);
+  box-sizing: padding-box;
+  border-radius: 2px;
+  overflow: hidden;
+  display: block;
+  padding: 2px;
+  margin-right: 5px;
+  width: 420px;
+}
+textarea:focus {
+  border-color: rgb(105, 111, 196);
+  outline: 1px solid rgb(105, 111, 196);
 }

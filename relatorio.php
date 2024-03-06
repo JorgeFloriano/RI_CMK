@@ -123,7 +123,7 @@
                 <div id="status2">EQUIPAMENTO APTO PARA OPERAR: <?= $_POST['apto'] ?? "NÃO APTO"?>!</div>
             </section>
             <section id="ressalvas">
-                <strong>Ressalvas:</strong> <?= $_POST['ressalva'] ?? "Sem ressalvas!"?>
+                <strong>Ressalvas:</strong> <?= $_POST['ressalvas'] ?? "Sem ressalvas!"?>
             </section>
             <table style="border-top: hidden;">
                 <tr><th>Assinatura e dados do cliente.</th><th colspan="6">Apontamento de Horas e relação dos técnicos</th></tr>

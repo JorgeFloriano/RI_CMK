@@ -27,7 +27,7 @@
         <main>
             <section id="info">
                 <table>
-                    <tr><td style="width: 34%;">Cliente: <strong>CNH</strong></td><td style="width: 35%;">Unidade: <strong>Sorocaba</strong></td><td>Solicitante: <strong>Lucas M.</strong></td></tr>
+                    <tr><td style="width: 130px;">Cliente: <strong>CNH</strong></td><td style="width: 130px;">Unidade: <strong>Sorocaba</strong></td><td>Solicitante: <strong>Lucas M.</strong></td></tr>
                     <tr><td>Nº Série: <strong>0909090</strong></td><td>Nº Cliente: <strong>CNH-171</strong></td><td>Nº CMK: <strong>54</strong></td></tr>
                     <tr><td>Fabricante: <strong>Demag</strong></td><td>Modelo: <strong>DC-Pro 5</strong></td><td>Capacidade: <strong>500 kg</strong></td></tr>
                     <tr><td>Prédio: <strong>P-80</strong></td><td>Setor: <strong>Montagem</strong></td><td>Área : <strong>Feeder</strong></td></tr>
@@ -38,11 +38,10 @@
                     <i class="fa fa-thumbs-up iconl" style="margin-left: 0px;"></i>Ok 
                     <i class="fa fa-wrench iconl"></i>Recuperar
                     <i class="fa fa-thumbs-down iconl"></i>Trocar
-                    <i class="fa fa-low-vision iconl"></i>Não inspecionado.
                 </p>
             </div>
             </section>
-            <form action="relatorio.php" method="post">
+            <form id="form" action="relatorio.php" method="post">
 
                 <section id="insp" class="insp">
                     INSPEÇÃO MECÂNICA
@@ -103,15 +102,15 @@
                 </section>
                 <section class="ask">
                     <div class="lab"><label for="id15">15-Teste de carga (kg)</label></div>
-                    <div class="opt"><input style="width: 90px;height: 20px" min="0" type="number" name="txt15" id="id15"></div>
+                    <div class="opt"><input style="width: 67px;height: 20px" min="0" type="number" name="txt15" id="id15"></div>
                 </section>
 
                 <section id="trole" class="element">
                     REDUTOR
                 </section>
 
-                <section class="ask" style="height: 50px;">
-                    <div class="lab"><label>16-Vazamento de óleo <br>( retentores, juntas e bujões ) </label></div>
+                <section class="ask">
+                    <div class="lab"><label>16-Vazamento de óleo ( retentores, juntas e bujões ) </label></div>
                     <?php opt('16')?>
                 </section>
                 <section class="ask">
@@ -139,19 +138,17 @@
                     <div class="lab"><label>21-Corrente prende, salta ou produz ruído </label></div>
                     <?php opt('21')?>
                 </section>
-                <section class="ask" style="height: 50px;">
-                    <div class="lab"><label><p>22-Amassamentos, estrias, fissuras, respingos de solda, corrosão ou deformação elo a elo</p></label></div>
+                <section class="ask">
+                    <div class="lab"><label>22-Amassamentos, estrias, fissuras, respingos de solda, corrosão ou deformação elo a elo</label></div>
                     <?php opt('22')?>
                 </section>
-                <section class="ask" style="height: 50px;">
+                <section class="ask">
                     <div class="lab"><label><p>23-Montagem (verificar se a corrente não está torcida ou com a solda invertida) </p></label></div>
                     <?php opt('23')?>
                 </section>
-                <section class="ask" style="height: 70px;">
+                <section class="ask">
                     <div class="lab"><label><p>
-                        24-Pino de fixação (se houver fissura,
-                             deformação ou desgaste visível,
-                             o mesmo deve ser substituido)
+                        24-Pino de fixação (se houver fissura,deformação<br> ou desgaste visível,o mesmo deve ser substituido)
                     </p></label></div>
                     <?php opt('24')?>
                 </section>
@@ -189,25 +186,25 @@
                     MEDIÇÕES DA CORRENTE DE CARGA (mm)
                 </section>
 
-                <section class="ask" style="height: 90px;padding:5px;">
+                <section class="ask">
                     <table class="med">
                         <tr>
-                            <th style="width: 60%;">NORMA TÉCNICA NBR 1292/1990</th>
-                            <th style="width: 15%;">Nominal</th>
-                            <th style="width: 13%;">Limite</th>
+                            <th style="width: 250px;">NORMA TÉCNICA NBR 1292/1990</th>
+                            <th style="width: 60px;">Nominal</th>
+                            <th style="width: 55px">Limite</th>
                             <th>Medido</th>
                         </tr>
                         <tr>
                             <td>31-Alongamento - Medida de 11 elos</td>
                             <td>248</td>
                             <td>253</td>
-                            <td><input style="width: 48px;height: 20px" min="248.0" step="0.1" type="number" name="txt31" id="id31"></td>
+                            <td><input class="medido" min="248.0" step="0.1" type="number" name="txt31" id="id31"></td>
                         </tr>
                         <tr>
                             <td>32-Medida DM-Diâmetro médio do elo</td>
                             <td>7.4</td>
                             <td>6.7</td>
-                            <td><input style="width: 48px;height: 20px;" step="0.1" min="0" max="7.4" type="number" name="txt32" id="id32"></td>
+                            <td><input class="medido" step="0.1" min="0" max="7.4" type="number" name="txt32" id="id32"></td>
                         </tr>
                     </table>
                 </section>
@@ -216,12 +213,12 @@
                     MEDIÇÕES DO GANCHO INFERIOR (mm)
                 </section>
 
-                <section class="ask" style="height: 115px;padding:5px;">
+                <section class="ask">
                     <table class="med" style="height: 105px;">
                         <tr>
-                            <th style="width: 60%;" colspan="2">NORMA TÉCNICA NBR 10070/1987</th>
-                            <th style="width: 15%;">Nominal</th>
-                            <th style="width: 13%;">Limite</th>
+                            <th style="width: 250px;" colspan="2">NORMA TÉCNICA NBR 10070/1987</th>
+                            <th style="width: 60px;">Nominal</th>
+                            <th style="width: 55px;">Limite</th>
                             <th>Medido</th>
                         </tr>
                         <tr>
@@ -235,7 +232,7 @@
                             <td>34-Medida Y</td>
                             <td>28</td>
                             <td>23.6</td>
-                            <td><input style="width: 48px;height: 20px;" step="0.1" min="0" max="28.0" type="number" name="txt34" id="id32"></td>
+                            <td><input class="medido" step="0.1" min="0" max="28.0" type="number" name="txt34" id="id32"></td>
                         </tr>
                         <tr>
                             <td>35-Alinhamento</td>
@@ -353,7 +350,7 @@
                     <?php opt('57')?>
                 </section>
                 <section class="ask">
-                    <div class="lab"><label>58-Estado de conservação da carcaça do rádio </label></div>
+                    <div class="lab"><label>58-Estado de conservação da carcaça </label></div>
                     <?php opt('58')?>
                 </section>
                 <section class="ask">
@@ -403,12 +400,12 @@
                     MEDIÇÕES DAS GRANDEZAS ELÉTRICAS
                 </section>
 
-                <section class="ask" style="height: 277px;padding:5px;">
+                <section class="ask">
                     <table class="med" style="height: 270px;">
                     <thead>
                         <tr>
-                            <th style="width: 73%;" colspan="3">VALORES CONSIDERADOS</th>
-                            <th style="width: 15%;">Nominal</th>
+                            <th style="width: 290px;" colspan="3">VALORES CONSIDERADOS</th>
+                            <th style="width: 75px;">Nominal</th>
                             <th>Medido</th>
                         </tr>
                     </thead>
@@ -418,7 +415,7 @@
                             <td colspan="2">Tensão de rede (V)</td>
                             <td>440</td>
                             <td>
-                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt67" id="id67">
+                                <input class="medido" step="0.1" min="0" type="number" name="txt67" id="id67">
                             </td>
                         </tr>
                         <tr>
@@ -426,15 +423,15 @@
                             <td colspan="2">Tensão do trafo de comando (VCA)</td>
                             <td>24</td>
                             <td>
-                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt68" id="id68">
+                                <input class="medido" step="0.1" min="0" type="number" name="txt68" id="id68">
                             </td>
                         </tr>
                         <tr>
                             <td>69-</td>
                             <td colspan="2">Medição do banco de resistências (Ohms)</td>
-                            <td>Ñ aplica</td>
+                            <td>Não aplica</td>
                             <td>
-                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt69" id="id69">
+                                <input class="medido" disabled step="0.1" min="0" type="number" name="txt69" id="id69">
                             </td>
                         </tr>
                         <tr>
@@ -443,21 +440,21 @@
                             <td>Corrente da alta (A)</td>
                             <td>1.0</td>
                             <td>
-                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt70" id="id70">
+                                <input class="medido" step="0.1" min="0" type="number" name="txt70" id="id70">
                             </td>
                         </tr>
                         <tr>
                             <td>Corrente da baixa (A)</td>
                             <td>1.0</td>
                             <td>
-                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt70_2" id="id70_2">
+                                <input class="medido" step="0.1" min="0" type="number" name="txt70_2" id="id70_2">
                             </td>
                         </tr>
                         <tr>
                             <td>Tensão do freio (VCC)</td>
-                            <td>Ñ Insp.</td>
+                            <td>Não aplica</td>
                             <td>
-                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt70_3" id="id70_3">
+                                <input class="medido" disabled step="0.1" min="0" type="number" name="txt70_3" id="id70_3">
                             </td>
                         </tr>
                         <tr>
@@ -466,25 +463,70 @@
                             <td>Corrente da alta (A)</td>
                             <td>1.8</td>
                             <td>
-                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt71" id="id71">
+                                <input class="medido" step="0.1" min="0" type="number" name="txt71" id="id71">
                             </td>
                         </tr>
                         <tr>
                             <td>Corrente da baixa (A)</td>
                             <td>2.8</td>
                             <td>
-                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt71_2" id="id71_2">
+                                <input class="medido" step="0.1" min="0" type="number" name="txt71_2" id="id71_2">
                             </td>
                         </tr>
                         <tr>
                             <td>Tensão do freio (VCC)</td>
-                            <td>Ñ Insp.</td>
+                            <td>190</td>
                             <td>
-                                <input style="width: 48px;height: 20px;" step="0.1" min="0" type="number" name="txt71_3" id="id71_3">
+                                <input class="medido" step="0.1" min="0" type="number" name="txt71_3" id="id71_3">
                             </td>
                         </tr>
                     </tbody>
                     </table>
+                </section>
+
+                <section class="ask" style="flex-direction: column;">
+                    <div>
+                        <strong><label>STATUS FINAL DA INSPEÇÃO: </label></strong>
+                    </div>
+                    <div >
+                        <div>
+                            <input type="radio" name="status" id="stat100" value="100% FINALIZADA">
+                            <label for="stat100">100% FINALIZADA</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="status" id="statRP" value="RESTAM PENDÊNCIAS">
+                            <label for="statRP">RESTAM PENDÊNCIAS</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="status" id="statRPA" value="RESTAM PENDÊNCIAS ANTERIORES">
+                            <label for="statRPA">RESTAM PENDÊNCIAS ANTERIORES</label>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="secApto" class="ask" style="flex-direction: column;">
+                    <div>
+                        <strong><label>EQUIPAMENTO APTO PARA OPERAR: </label></strong>
+                    </div>
+                    <div >
+                        <div onclick="displayoff('secRessalva', 'secApto', 'idressalvas')">
+                            <input type="radio" name="apto" id="apto" value="SIM">
+                            <label for="apto">SIM</label>
+                        </div>
+                        <div onclick="displayoff('secRessalva', 'secApto', 'idressalvas')">
+                            <input type="radio" name="apto" id="nApto" value="NÃO">
+                            <label for="nApto">NÃO</label>
+                        </div>
+                        <div onclick="displayon('secRessalva', 'secApto')">
+                            <input type="radio" name="apto" id="aptoCR" value="SIM COM RESSALVAS">
+                            <label for="aptoCR">SIM COM RESSALVAS</label>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="secRessalva" class="obs" style="display: none;">
+                    <strong>RESSALVAS:</strong>
+                    <textarea name="ressalvas" id="idressalvas" class='autoExpand' rows='1' data-min-rows='1' placeholder='Exemplo: Movimento de elevação apenas com a velocidade baixa.' autofocus></textarea>
                 </section>
 
                 <button type="submit" class="btn">CONFIRMA</button>
