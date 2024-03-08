@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,7 +102,7 @@
                 </section>
                 <section class="ask">
                     <div class="lab"><label for="id15">15-Teste de carga (kg)</label></div>
-                    <div class="opt"><input style="width: 67px;height: 20px" min="0" type="number" name="txt15" id="id15"></div>
+                    <div class="opt"><input style="width: 65px;height: 20px;margin: 0px 5px;" min="0" type="number" name="txt15" id="id15"></div>
                 </section>
 
                 <section id="trole" class="element">
@@ -148,7 +148,7 @@
                 </section>
                 <section class="ask">
                     <div class="lab"><label><p>
-                        24-Pino de fixação (se houver fissura,deformação<br> ou desgaste visível,o mesmo deve ser substituido)
+                        24-Pino de fixação (se houver fissura,deformação ou desgaste visível,o mesmo deve ser substituido)
                     </p></label></div>
                     <?php opt('24')?>
                 </section>
@@ -484,7 +484,7 @@
                     </table>
                 </section>
 
-                <section class="ask" style="flex-direction: column;">
+                <section class="ask" style="flex-direction: column;margin: 3px 0px 4px 0px;">
                     <div>
                         <strong><label>STATUS FINAL DA INSPEÇÃO: </label></strong>
                     </div>
@@ -504,7 +504,7 @@
                     </div>
                 </section>
 
-                <section id="secApto" class="ask" style="flex-direction: column;">
+                <section id="secApto" class="ask" style="flex-direction: column;margin: 2px 0px;">
                     <div>
                         <strong><label>EQUIPAMENTO APTO PARA OPERAR: </label></strong>
                     </div>
@@ -525,7 +525,7 @@
                 </section>
 
                 <section id="secRessalva" class="obs" style="display: none;">
-                    <strong>RESSALVAS:</strong>
+                    <label for="idressalvas"><strong>RESSALVAS:</strong></label>
                     <textarea name="ressalvas" id="idressalvas" class='autoExpand' rows='1' data-min-rows='1' placeholder='Exemplo: Movimento de elevação apenas com a velocidade baixa.' autofocus></textarea>
                 </section>
 

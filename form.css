@@ -18,7 +18,7 @@ gelo #EFEEEC
       min-height: auto;
       min-width: 450px;
       background-color: rgb(227, 222, 222);
-      font-size: 12px;
+      font-size: 14px;
   }
   section#form {
     width:450px;
@@ -35,18 +35,17 @@ gelo #EFEEEC
       margin: 3px 0;
   }
   main {
-    font-size: 12px;
+    font-size: 17px;
   }
   div#header1 {
     float: left;
-    width: 115px;
+    width: 110px;
   }
   div#header2 {
     float: left;
     text-align: center;
     font-weight: bold;
-    font-size: 12px;
-    padding: 4px;
+    font-size: 14px;
 }
 div#header3 {
   float: right;
@@ -66,7 +65,7 @@ div#header3 {
 }
 
 div#legend {
-  font-size: 10px;
+  font-size: 12px;
   color: rgb(41, 50, 184);
 }
 i.iconl {
@@ -77,7 +76,7 @@ section.insp {
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 15px;
     color: white;
     padding: 5px;
     margin: 3px 0;
@@ -87,33 +86,35 @@ section.element {
     background-color: rgb(105, 111, 196);
     text-align: center;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 15px;
     border-radius: 5px;
     color: white;
-    margin: 3px 0;
+    margin: 3px 0px 5px 0px;
     padding: 5px;
 }
 section.ask {
   background-color: white;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
   height: auto;
   padding: 8px 2px 3px 5px;
-  margin: 2px 0;
   width: 100%;
-  display: inline-flex;
+  margin-bottom: -4px;
+  display: inline-block;
 }
   div.lab {
-    width: 356px;
+  width: 335px;
+  float: left;
 }
 div.opt {
   color: rgb(198, 194, 194);
-  width: 69px;
+  float: right;
 }
 
 input.medido {
   width: 48px;
-  height: 20px
+  height: 20px;
+  padding: 3px;
 }
 
 table.med, table.med > th {
@@ -175,10 +176,10 @@ table.med {
 section.obs {
   background-color: white;
   border-radius: 0px 0px 5px 5px;
-  font-size: 12px;
+  font-size: 14px;
   height: auto;
   padding: 8px 2px 3px 5px;
-  margin: 0;
+  margin-bottom: 1px;
   width: 100%;
   display: inline-block;
 }

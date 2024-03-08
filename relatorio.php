@@ -133,6 +133,13 @@
                 <tr><td>29/02/2024</td><td>14:00</td><td>16:00</td><td>Floriano Silva</td><td>Téc. Manutenção</td><td>Assinatura</td></tr>
                 <tr><td>29/02/2024</td><td>14:00</td><td>16:00</td><td>Floriano Silva</td><td>Téc. Manutenção</td><td>Assinatura</td></tr>
             </table>
+            <?php 
+                for ($i=1;$i<67;$i++) {
+                    if (isset($_POST['txtJust'.$i]) && $_POST['txtJust'.$i] !== '') {
+                        echo "Ítem $i: ". $_POST['txtJust'.$i]."<br>";
+                    }
+                }
+                ?>
         </main>
     </section>
 </body>

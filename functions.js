@@ -1,18 +1,31 @@
 
-function check(c1, ch, c2, u1, c3, u2) {
+function check(c1, ch, c2, u1, c3, u2, opt, obs, txt) {
    var col = document.getElementById(c1).style.color;
    var che = document.getElementById(ch).checked;
-   if(che == true && col == "rgb(41, 50, 184)") {
-      document.getElementById(c1).style.color = "rgb(198, 194, 194)";
-      document.getElementById(ch).checked = false;
-   } else {
-      document.getElementById(c1).style.color = "rgb(41, 50, 184)";
-      document.getElementById(ch).checked = true;
-   }
+  
    document.getElementById(c2).style.color = "rgb(198, 194, 194)";
    document.getElementById(u1).checked = false;
    document.getElementById(c3).style.color = "rgb(198, 194, 194)";
    document.getElementById(u2).checked = false;
+   if ( opt == 'ok') {
+      document.getElementById(obs).style.display = 'none';
+      document.getElementById(txt).value = '';
+   } if (opt == 'tr') {
+      document.getElementById(obs).style.display = 'block';
+      document.getElementById(txt).placeholder = "Motivo da recomendação para substituir o ítem";
+   } if (opt == 're') {
+      document.getElementById(obs).style.display = 'block';
+      document.getElementById(txt).placeholder = "Motivo para recomendação para recuperar o ítem";
+   }
+   if(che == true && col == "rgb(41, 50, 184)") {
+      document.getElementById(c1).style.color = "rgb(198, 194, 194)";
+      document.getElementById(ch).checked = false;
+      document.getElementById(obs).style.display = 'none';
+      document.getElementById(txt).value = '';
+   } else {
+      document.getElementById(c1).style.color = "rgb(41, 50, 184)";
+      document.getElementById(ch).checked = true;
+   }
 }
 
 function displayon (obs, item) {
@@ -60,7 +73,7 @@ function getScrollHeight(elm){
    !elm._baseScrollHeight && getScrollHeight(elm)
  
    elm.rows = minRows
-   rows = Math.ceil((elm.scrollHeight - elm._baseScrollHeight) / 20)
+   rows = Math.ceil((elm.scrollHeight - elm._baseScrollHeight) / 22)
    elm.rows = minRows + rows
  }
  
