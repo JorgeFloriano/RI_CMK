@@ -126,12 +126,26 @@
                 <strong>Ressalvas:</strong> <?= $_POST['ressalvas'] ?? "Sem ressalvas!"?>
             </section>
             <table style="border-top: hidden;">
-                <tr><th>Assinatura e dados do cliente.</th><th colspan="6">Apontamento de Horas e relação dos técnicos</th></tr>
-                <tr><td rowspan="5"></td><th style="width: 9%;">Data</th><th style="width: 7%;">Início</th><th style="width: 7%;">Término</th><th style="width: 20%;">Nome do Técnico</th><th style="width: 15%;">Função</th><th>Visto do Técnico</th></tr>
-                <tr><td>29/02/2024</td><td>14:00</td><td>16:00</td><td>Jorge Luis</td><td>Téc. Manutenção</td><td>Assinatura</td></tr>
-                <tr><td>29/02/2024</td><td>14:00</td><td>16:00</td><td>Floriano Silva</td><td>Téc. Manutenção</td><td>Assinatura</td></tr>
-                <tr><td>29/02/2024</td><td>14:00</td><td>16:00</td><td>Floriano Silva</td><td>Téc. Manutenção</td><td>Assinatura</td></tr>
-                <tr><td>29/02/2024</td><td>14:00</td><td>16:00</td><td>Floriano Silva</td><td>Téc. Manutenção</td><td>Assinatura</td></tr>
+                <tr>
+                    <th>Assinatura do cliente.</th>
+                    <th colspan="6">Apontamento de Horas e relação dos técnicos</th>
+                </tr>
+                <tr>
+                    <td rowspan="5" style="width: 150px;"></td>
+                </tr>
+                <tr>
+                    <td>Jorge Luis</td>
+                    <td style="width: 150px;" rowspan="4">
+                        <img src=<?=$_POST['signTec1']?> alt="imagem" width="100%">
+                    </td>
+                    <td>Floriano Silva</td>
+                    <td style="width: 150px;" rowspan="4">
+                        <img src=<?=$_POST['signTec2']?> alt="imagem" width="100%">
+                    </td>
+                </tr>
+                <tr><td>Técnico de Manutenção</td><td>Eletromecânico A</td></tr>
+                <tr><td>29/02/2024</td><td>29/02/2024</td></tr>
+                <tr><td>07:00 - 11:00</td><td>07:00 - 11:00</td></tr>
             </table>
             <?php 
                 for ($i=1;$i<67;$i++) {

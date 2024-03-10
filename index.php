@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="signature.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="functions.js"></script>
@@ -11,7 +12,7 @@
     <title>Relatório de Inspeção</title>
 </head>
 <body>
-    <section id="form">
+    <section id="all">
         <header>
             <div id="header1">
                 <img src="logo_cmk.jpg" alt="logo cmk" width="80px">
@@ -226,13 +227,13 @@
                             <td>33-Medida W1</td>
                             <td>41</td>
                             <td>45.1</td>
-                            <td><input style="width: 48px;height: 20px" min="41.0" step="0.1" type="number" name="txt33" id="id31"></td>
+                            <td><input style="width: 48px;height: 20px" min="41.0" step="0.1" type="number" name="txt33" id="id33"></td>
                         </tr>
                         <tr>
                             <td>34-Medida Y</td>
                             <td>28</td>
                             <td>23.6</td>
-                            <td><input class="medido" step="0.1" min="0" max="28.0" type="number" name="txt34" id="id32"></td>
+                            <td><input class="medido" step="0.1" min="0" max="28.0" type="number" name="txt34" id="id34"></td>
                         </tr>
                         <tr>
                             <td>35-Alinhamento</td>
@@ -529,8 +530,43 @@
                     <textarea name="ressalvas" id="idressalvas" class='autoExpand' rows='1' data-min-rows='1' placeholder='Exemplo: Movimento de elevação apenas com a velocidade baixa.' autofocus></textarea>
                 </section>
 
+                <section class="signature">
+
+                    <p>
+                        <b>ASSINATURA DO TÉCNICO 1</b>
+                    </p>
+
+                    <canvas height="200" width="417" class="signature-pad" id="canv1"></canvas>
+
+                    <p>
+                        <a id="clear1" href="#" class="clear-button">Apagar <i class="fa fa-eraser" aria-hidden="true"></i></a>
+                    </p>
+
+                    <input type="hidden" name="signTec1" id="idSignTec1">
+
+                </section>
+
+                <section class="signature">
+
+                    <p>
+                        <b>ASSINATURA DO TÉCNICO 2</b>
+                    </p>
+
+                    <canvas height="200" width="417" class="signature-pad" id="canv2"></canvas>
+
+                    <p>
+                        <a id="clear2" href="#" class="clear-button">Apagar <i class="fa fa-eraser" aria-hidden="true"></i></a>
+                    </p>
+
+                    <input type="hidden" name="signTec2" id="idSignTec2">
+                   
+
+                </section>
+
                 <button type="submit" class="btn">CONFIRMA</button>
             </form>
+            <script src="signature.js"></script>
+            <script src="signature2.js"></script>
         </main>
     </section>
 </body>
