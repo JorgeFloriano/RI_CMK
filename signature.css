@@ -40,8 +40,7 @@ section.signature {
     height: auto;
     padding: 5px;
     width: 100%;
-    margin: 7px 0px 4px 0px;
-    display: inline-block;
+    margin: 5px 0px;
   }
 
 @media (pointer: coarse) {

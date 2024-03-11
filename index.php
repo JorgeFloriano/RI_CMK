@@ -51,143 +51,62 @@
                 <section id="trole" class="element">
                     TROLE - Capacidade: 500 kg
                 </section>
-
-                <section class="ask">
-                    <div class="lab"><label>04-Motor (fixação, ruídos anormais) </label></div>
-                    <?php opt('04')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>05-Freio (regular se necessário) </label></div>
-                    <?php opt('05')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>06-Redutor (vazamento, nível de óleo) </label></div>
-                    <?php opt('06')?>
-                </section>
+                <?php opt('4','Motor (fixação e ruidos anormais)')?>
+                <?php opt('5','Freio (regular se necessário)')?>
+                <?php opt('6','Redutor (vazamento, nível de óleo)')?>
 
                 <section id="trole" class="element">
                     TALHA - Capacidade: 500 kg
                 </section>
-
-                <section class="ask">
-                    <div class="lab"><label>07-Guia da corrente </label></div>
-                    <?php opt('07')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>08-Batedor stop </label></div>
-                    <?php opt('08')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>09-Armazenador de corrente </label></div>
-                    <?php opt('09')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>10-Fixação superior </label></div>
-                    <?php opt('10')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>11-Fricção </label></div>
-                    <?php opt('11')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>12-Freio (regular se necessário) </label></div>
-                    <?php opt('12')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>13-Lubrificação </label></div>
-                    <?php opt('13')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>14-Carcaça </label></div>
-                    <?php opt('14')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label for="id15">15-Teste de carga (kg)</label></div>
-                    <div class="opt"><input style="width: 65px;height: 20px;margin: 0px 5px;" min="0" type="number" name="txt15" id="id15"></div>
+                <?php opt('7', 'Guia da corrente')?>
+                <?php opt('8', 'Batedor stop')?>
+                <?php opt('9', 'Armazenador de corrente')?>
+                <?php opt('10', 'Fixação superior')?>
+                <?php opt('11', 'Fricção')?>
+                <?php opt('12', 'Freio (regular se necessário)')?>
+                <?php opt('13', 'Lubrificação')?>
+                <?php opt('14', 'Carcaça')?>
+                <section class="item">
+                    <section class="ask">
+                        <div class="lab"><label for="id15">15-Teste de carga (kg)</label></div>
+                        <div class="opt">
+                            <input style="width: 65px;height: 20px;" min="0" type="number" name="txt15" id="id15">
+                        </div>
+                    </section>
                 </section>
 
                 <section id="trole" class="element">
                     REDUTOR
                 </section>
-
-                <section class="ask">
-                    <div class="lab"><label>16-Vazamento de óleo ( retentores, juntas e bujões ) </label></div>
-                    <?php opt('16')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>17-Nível de óleo (completar se necessário) </label></div>
-                    <?php opt('17')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>18-Ruídos e aquecimento anormal </label></div>
-                    <?php opt('18')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>19-Reapertar parafusos de fixação </label></div>
-                    <?php opt('19')?>
-                </section>
+                <?php opt('16', 'Vazamento de óleo ( retentores, juntas e bujões )')?>
+                <?php opt('17', 'Nível de óleo (completar se necessário)')?>
+                <?php opt('18', 'Ruídos e aquecimento anormal')?>
+                <?php opt('19', 'Reapertar parafusos de fixação')?>
 
                 <section id="trole" class="element">
                     CORRENTE
                 </section>
-
-                <section class="ask">
-                    <div class="lab"><label>20-Limpeza e lubrificação da corrente </label></div>
-                    <?php opt('20')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>21-Corrente prende, salta ou produz ruído </label></div>
-                    <?php opt('21')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>22-Amassamentos, estrias, fissuras, respingos de solda, corrosão ou deformação elo a elo</label></div>
-                    <?php opt('22')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label><p>23-Montagem (verificar se a corrente não está torcida ou com a solda invertida) </p></label></div>
-                    <?php opt('23')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label><p>
-                        24-Pino de fixação (se houver fissura,deformação ou desgaste visível,o mesmo deve ser substituido)
-                    </p></label></div>
-                    <?php opt('24')?>
-                </section>
+                <?php opt('20', 'Limpeza e lubrificação da corrente')?>
+                <?php opt('21', 'Corrente prende, salta ou produz ruído')?>
+                <?php opt('22', 'Amassamentos, estrias, fissuras, respingos de solda, corrosão ou deformação elo a elo')?>
+                <?php opt('23', 'Montagem (verificar se a corrente não está torcida ou com a solda invertida)')?>
+                <?php opt('24', 'Pino de fixação (se houver fissura,deformação ou desgaste visível,o mesmo deve ser substituido)')?>
 
                 <section id="trole" class="element">
                     BLOCO INFERIOR - Capacidade: 500 kg
                 </section>
-
-                <section class="ask">
-                    <div class="lab"><label>25-Caixa do gancho </label></div>
-                    <?php opt('25')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>26-Carretel e rolamentos </label></div>
-                    <?php opt('26')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>27-Carcaça quanto à desgastes e trincas </label></div>
-                    <?php opt('27')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>28-Trava de gancho </label></div>
-                    <?php opt('28')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>29-Placa de identificação </label></div>
-                    <?php opt('29')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>30-Lubrificar caixa de gancho </label></div>
-                    <?php opt('30')?>
-                </section>
-
+                <?php opt('25', 'Caixa do gancho')?>
+                <?php opt('26', 'Carretel e rolamentos')?>
+                <?php opt('27', 'Carcaça quanto à desgastes e trincas')?>
+                <?php opt('28', 'Trava de gancho')?>
+                <?php opt('29', 'Placa de identificação')?>
+                <?php opt('30', 'Lubrificar caixa de gancho')?>
+             
                 <section id="trole" class="element">
                     MEDIÇÕES DA CORRENTE DE CARGA (mm)
                 </section>
 
-                <section class="ask">
+                <section class="item">
                     <table class="med">
                         <tr>
                             <th style="width: 250px;">NORMA TÉCNICA NBR 1292/1990</th>
@@ -214,7 +133,7 @@
                     MEDIÇÕES DO GANCHO INFERIOR (mm)
                 </section>
 
-                <section class="ask">
+                <section class="item">
                     <table class="med" style="height: 105px;">
                         <tr>
                             <th style="width: 250px;" colspan="2">NORMA TÉCNICA NBR 10070/1987</th>
@@ -255,153 +174,65 @@
                     TALHA
                 </section>
 
-                <section class="ask">
-                    <div class="lab"><label>36-Fixação do painel, tampa e limpeza </label></div>
-                    <?php opt('36')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>37-Chave geral, fusíveis e disjuntores </label></div>
-                    <?php opt('37')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>38-Motores (medições e aquecimento) </label></div>
-                    <?php opt('38')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>39-Caixa de ligação </label></div>
-                    <?php opt('39')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>40-Cabo de alimentação </label></div>
-                    <?php opt('40')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>41-Prensa cabos </label></div>
-                    <?php opt('41')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>42-Tomadas de engate rápido </label></div>
-                    <?php opt('42')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>43-Contatores e contatos </label></div>
-                    <?php opt('43')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>44-Trafos de potência e comando </label></div>
-                    <?php opt('44')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>45-Bornes e terminais </label></div>
-                    <?php opt('45')?>
-                </section>
+                <?php opt('36', 'Fixação do painel, tampa e limpeza')?>
+                <?php opt('37', 'Chave geral, fusíveis e disjuntores')?>
+                <?php opt('38', 'Motores (medições e aquecimento)')?>
+                <?php opt('39', 'Caixa de ligação')?>
+                <?php opt('40', 'Cabo de alimentação')?>
+                <?php opt('41', 'Prensa cabos')?>
+                <?php opt('42', 'Tomadas de engate rápido')?>
+                <?php opt('43', 'Contatores e contatos')?>
+                <?php opt('44', 'Trafos de potência e comando')?>
+                <?php opt('45', 'Bornes e terminais')?>
 
                 <section id="trole" class="element">
                     BOTOEIRA
                 </section>
 
-                <section class="ask">
-                    <div class="lab"><label>48-Funcionamento do botões </label></div>
-                    <?php opt('48')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>49-Cabo elétrico e prensa cabo </label></div>
-                    <?php opt('49')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>50-Cabo de aço de sustentação e fixação </label></div>
-                    <?php opt('50')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>51-Caixa de conexão </label></div>
-                    <?php opt('51')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>52-Carcaça e identificão dos botões </label></div>
-                    <?php opt('52')?>
-                </section>
+                <?php opt('48', 'Funcionamento do botões')?>
+                <?php opt('49', 'Cabo elétrico e prensa cabo')?>
+                <?php opt('50', 'Cabo de aço de sustentação e fixação')?>
+                <?php opt('51', 'Caixa de conexão')?>
+                <?php opt('52', 'Carcaça e identificão dos botões')?>
 
                 <section id="trole" class="element">
                     ELETRIFICAÇÃO TRANSVERSAL
                 </section>
-
-                <section class="ask">
-                    <div class="lab"><label>53-Fixação e conservação dos cabos </label></div>
-                    <?php opt('53')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>54-Estado do perfil, fixações e emendas </label></div>
-                    <?php opt('54')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>55-Carros porta cabos e arrastador </label></div>
-                    <?php opt('55')?>
-                </section>
+                <?php opt('53', 'Fixação e conservação dos cabos')?>
+                <?php opt('54', 'Estado do perfil, fixações e emendas')?>
+                <?php opt('55', 'Carros porta cabos e arrastador')?>
 
                 <section id="trole" class="element">
                     RÁDIO CONTROLE
                 </section>
 
-                <section class="ask">
-                    <div class="lab"><label>56-Funcionamento e estado do emissor </label></div>
-                    <?php opt('56')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>57-Reaperto de todas as conexões e ligações </label></div>
-                    <?php opt('57')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>58-Estado de conservação da carcaça </label></div>
-                    <?php opt('58')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>59-Estado da bateria / pilhas do emissor </label></div>
-                    <?php opt('59')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>60-Sinais luminosos do receptor e transmissor </label></div>
-                    <?php opt('60')?>
-                </section>
+                <?php opt('56', 'Funcionamento e estado do emissor')?>
+                <?php opt('57', 'Reaperto de todas as conexões e ligações')?>
+                <?php opt('58', 'Estado de conservação da carcaça')?>
+                <?php opt('59', 'Estado da bateria / pilhas do emissor')?>
+                <?php opt('60', 'Sinais luminosos do receptor e transmissor')?>
 
                 <section id="trole" class="element">
                     LIMITE DE FIM DE CURSO - Elevação
                 </section>
 
-                <section class="ask">
-                    <div class="lab"><label>61-Funcionamento da chave limite </label></div>
-                    <?php opt('61')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>62-Cabos ou corrente do pino </label></div>
-                    <?php opt('62')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>63-Contatos, molas e articulação </label></div>
-                    <?php opt('63')?>
-                </section>
+                <?php opt('61', 'Funcionamento da chave limite')?>
+                <?php opt('62', 'Cabos ou corrente do pino')?>
+                <?php opt('63', 'Contatos, molas e articulação')?>
 
                 <section id="trole" class="element">
                     LIMITE DE FIM DE CURSO - Direção
                 </section>
 
-                <section class="ask">
-                    <div class="lab"><label>64-Funcionamento da chave limite </label></div>
-                    <?php opt('64')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>65-Cabos ou corrente do pino </label></div>
-                    <?php opt('65')?>
-                </section>
-                <section class="ask">
-                    <div class="lab"><label>66-Contatos, molas e articulação </label></div>
-                    <?php opt('66')?>
-                </section>
+                <?php opt('64', 'Funcionamento da chave limite')?>
+                <?php opt('65', 'Cabos ou corrente do pino')?>
+                <?php opt('66', 'Contatos, molas e articulação')?>
 
                 <section id="trole" class="element">
                     MEDIÇÕES DAS GRANDEZAS ELÉTRICAS
                 </section>
 
-                <section class="ask">
+                <section class="item">
                     <table class="med" style="height: 270px;">
                     <thead>
                         <tr>
@@ -485,7 +316,7 @@
                     </table>
                 </section>
 
-                <section class="ask" style="flex-direction: column;margin: 3px 0px 4px 0px;">
+                <section class="item" style="flex-direction: column;">
                     <div>
                         <strong><label>STATUS FINAL DA INSPEÇÃO: </label></strong>
                     </div>
@@ -505,7 +336,7 @@
                     </div>
                 </section>
 
-                <section id="secApto" class="ask" style="flex-direction: column;margin: 2px 0px;">
+                <section id="secApto" class="item" style="flex-direction: column;">
                     <div>
                         <strong><label>EQUIPAMENTO APTO PARA OPERAR: </label></strong>
                     </div>
@@ -523,12 +354,13 @@
                             <label for="aptoCR">SIM COM RESSALVAS</label>
                         </div>
                     </div>
+                    <section id="secRessalva" class="obs">
+                        <label for="idressalvas"><strong>RESSALVAS:</strong></label>
+                        <textarea name="ressalvas" id="idressalvas" class='autoExpand' rows='1' data-min-rows='1' placeholder='Exemplo: Movimento de elevação apenas com a velocidade baixa.' autofocus></textarea>
+                    </section>
                 </section>
 
-                <section id="secRessalva" class="obs" style="display: none;">
-                    <label for="idressalvas"><strong>RESSALVAS:</strong></label>
-                    <textarea name="ressalvas" id="idressalvas" class='autoExpand' rows='1' data-min-rows='1' placeholder='Exemplo: Movimento de elevação apenas com a velocidade baixa.' autofocus></textarea>
-                </section>
+                
 
                 <section class="signature">
 

@@ -12,10 +12,10 @@ function check(c1, ch, c2, u1, c3, u2, opt, obs, txt) {
       document.getElementById(txt).value = '';
    } if (opt == 'tr') {
       document.getElementById(obs).style.display = 'block';
-      document.getElementById(txt).placeholder = "Motivo da recomendação para substituir o ítem";
+      document.getElementById(txt).placeholder = "Razão da recomendação para substituição o ítem";
    } if (opt == 're') {
       document.getElementById(obs).style.display = 'block';
-      document.getElementById(txt).placeholder = "Motivo para recomendação para recuperar o ítem";
+      document.getElementById(txt).placeholder = "Razão da recomendação para reparação do ítem";
    }
    if(che == true && col == "rgb(41, 50, 184)") {
       document.getElementById(c1).style.color = "rgb(198, 194, 194)";

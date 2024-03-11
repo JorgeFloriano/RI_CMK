@@ -32,7 +32,7 @@ gelo #EFEEEC
       border-radius: 5px;
       height: 55px;
       padding: 5px;
-      margin: 3px 0;
+      margin: 5px 0;
   }
   main {
     font-size: 17px;
@@ -60,7 +60,7 @@ div#header3 {
       font-size: 12px;
       background-color: white;
       border-radius: 5px;
-      margin: 3px 0;
+      margin: 5px 0;
       padding: 5px;
 }
 
@@ -79,7 +79,7 @@ section.insp {
     font-size: 15px;
     color: white;
     padding: 5px;
-    margin: 3px 0;
+    margin: 5px 0;
 }
 
 section.element {
@@ -92,15 +92,21 @@ section.element {
     margin: 3px 0px 5px 0px;
     padding: 5px;
 }
-section.ask {
+
+section.item {
   background-color: white;
   border-radius: 5px;
   font-size: 14px;
   height: auto;
-  padding: 8px 2px 3px 5px;
+  padding: 5px;
   width: 100%;
-  margin-bottom: -4px;
+  margin: 5px 0px;
+}
+
+section.ask {
   display: inline-block;
+  vertical-align: bottom;
+  height: auto;
 }
   div.lab {
   width: 335px;
@@ -109,6 +115,7 @@ section.ask {
 div.opt {
   color: rgb(198, 194, 194);
   float: right;
+  margin-left: 14px;
 }
 
 input.medido {
@@ -178,10 +185,9 @@ section.obs {
   border-radius: 0px 0px 5px 5px;
   font-size: 14px;
   height: auto;
-  padding: 8px 2px 3px 5px;
-  margin-bottom: 1px;
   width: 100%;
-  display: inline-block;
+  margin-top: 5px;
+  display: none;
 }
 
 textarea {  
@@ -191,7 +197,6 @@ textarea {
   overflow: hidden;
   display: block;
   padding: 2px;
-  margin-right: 5px;
   width: 420px;
 }
 textarea:focus {
