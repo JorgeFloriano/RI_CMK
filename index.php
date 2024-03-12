@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="signature.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="functions.js"></script>
     <?php require_once("functions.php")?>
+    <style>
+       
+    </style>
     <title>Relatório de Inspeção</title>
 </head>
-<body>
+<body id="body">
     <section id="all">
         <header>
             <div id="header1">
@@ -70,7 +72,7 @@
                     <section class="ask">
                         <div class="lab"><label for="id15">15-Teste de carga (kg)</label></div>
                         <div class="opt">
-                            <input style="width: 65px;height: 20px;" min="0" type="number" name="txt15" id="id15">
+                            <input style="width: 65px;" min="0" type="number" name="txt15" id="id15">
                         </div>
                     </section>
                 </section>
@@ -146,7 +148,7 @@
                             <td>33-Medida W1</td>
                             <td>41</td>
                             <td>45.1</td>
-                            <td><input style="width: 48px;height: 20px" min="41.0" step="0.1" type="number" name="txt33" id="id33"></td>
+                            <td><input class="medido" min="41.0" step="0.1" type="number" name="txt33" id="id33"></td>
                         </tr>
                         <tr>
                             <td>34-Medida Y</td>
@@ -318,7 +320,7 @@
 
                 <section class="item" style="flex-direction: column;">
                     <div>
-                        <strong><label>STATUS FINAL DA INSPEÇÃO: </label></strong>
+                        <strong>STATUS FINAL DA INSPEÇÃO: </strong>
                     </div>
                     <div >
                         <div>
@@ -338,7 +340,7 @@
 
                 <section id="secApto" class="item" style="flex-direction: column;">
                     <div>
-                        <strong><label>EQUIPAMENTO APTO PARA OPERAR: </label></strong>
+                        <strong>EQUIPAMENTO APTO PARA OPERAR: </strong>
                     </div>
                     <div >
                         <div onclick="displayoff('secRessalva', 'secApto', 'idressalvas')">
@@ -360,40 +362,69 @@
                     </section>
                 </section>
 
-                
+                <div id="infoTec1" class="signature">
+                    <p><b>APONTAMENTO DO TÉCNICO 1</b></p>
+                    <div class="itInfTec">
+                        <label class="ltec" for="tec1Name">Nome: </label>
+                        <input class="itec" type="text" name="txtTec1Name" id="tec1Name">
+                    </div>
+                    <div class="itInfTec">
+                        <label class="ltec" for="tec1Func">Função: </label>
+                        <input class="itec" type="text" name="txtTec1Func" id="tec1Func">
+                    </div>
+                    <div class="itInfTec">
+                        <label class="ltec" for="tec1data">Data: </label>
+                        <input class="itec " type="date" name="txtTec1Data" id="tec1data">
+                    </div>
+                    <div class="itInfTec">
+                        <label class="horario" for="tec1HI">H. inicial: </label>
+                        <input class="horario" type="time" name="txtTec1HI" id="tec1HI" style="width: 120px;">
+                        <label class="horario" for="tec1HF" style="margin-left: 5px;">H. final: </label>
+                        <input class="horario" type="time" name="txtTec1HF" id="tec1HF" style="width: 120px;">
+                    </div>
+                    <div class="itInfTec">
+                        <label class="ltec" for="canv1">Assinatura:</label>
+                        <canvas height="200" width="410" class="signature-pad" id="canv1"></canvas>
+                        <p>
+                            <a id="pen1" href="#" class="signature-button"><i class="fa fa-pencil" aria-hidden="true"></i>Assinar </a>
+                            <a id="okSign1" href="#" class="signature-button"><i class="fa fa-check" aria-hidden="true"></i>Ok </a>
+                            <a id="clear1" href="#" class="signature-button"><i class="fa fa-eraser" aria-hidden="true"></i>Apagar </a>
+                        </p>
+                        <input type="hidden" name="signTec1" id="idSignTec1">
+                    </div>
+                </div>
 
-                <section class="signature">
-
-                    <p>
-                        <b>ASSINATURA DO TÉCNICO 1</b>
-                    </p>
-
-                    <canvas height="200" width="417" class="signature-pad" id="canv1"></canvas>
-
-                    <p>
-                        <a id="clear1" href="#" class="clear-button">Apagar <i class="fa fa-eraser" aria-hidden="true"></i></a>
-                    </p>
-
-                    <input type="hidden" name="signTec1" id="idSignTec1">
-
-                </section>
-
-                <section class="signature">
-
-                    <p>
-                        <b>ASSINATURA DO TÉCNICO 2</b>
-                    </p>
-
-                    <canvas height="200" width="417" class="signature-pad" id="canv2"></canvas>
-
-                    <p>
-                        <a id="clear2" href="#" class="clear-button">Apagar <i class="fa fa-eraser" aria-hidden="true"></i></a>
-                    </p>
-
-                    <input type="hidden" name="signTec2" id="idSignTec2">
-                   
-
-                </section>
+                <div id="infoTec2" class="signature">
+                    <p><b>APONTAMENTO DO TÉCNICO 2</b></p>
+                    <div class="itInfTec">
+                        <label class="ltec" for="tec2Name">Nome: </label>
+                        <input class="itec" type="text" name="txtTec2Name" id="tec2Name">
+                    </div>
+                    <div class="itInfTec">
+                        <label class="ltec" for="tec2Func">Função: </label>
+                        <input class="itec" type="text" name="txtTec2Func" id="tec2Func">
+                    </div>
+                    <div class="itInfTec">
+                        <label class="ltec" for="tec2data">Data: </label>
+                        <input class="itec " type="date" name="txtTec2Data" id="tec2data">
+                    </div>
+                    <div class="itInfTec">
+                        <label class="horario" for="tec2HI">H. inicial: </label>
+                        <input class="horario" type="time" name="txtTec2HI" id="tec2HI" style="width: 120px;">
+                        <label class="horario" for="tec2HF" style="margin-left: 5px;">H. final: </label>
+                        <input class="horario" type="time" name="txtTec2HF" id="tec2HF" style="width: 120px;">
+                    </div>
+                    <div class="itInfTec">
+                        <label class="ltec" for="canv2">Assinatura:</label>
+                        <canvas height="200" width="410" class="signature-pad" id="canv2"></canvas>
+                        <p>
+                            <a id="pen2" href="#" class="signature-button"><i class="fa fa-pencil" aria-hidden="true"></i>Assinar </a>
+                            <a id="okSign2" href="#" class="signature-button"><i class="fa fa-check" aria-hidden="true"></i>Ok </a>
+                            <a id="clear2" href="#" class="signature-button"><i class="fa fa-eraser" aria-hidden="true"></i>Apagar </a>
+                        </p>
+                        <input type="hidden" name="signTec2" id="idSignTec2">
+                    </div>
+                </div>
 
                 <button type="submit" class="btn">CONFIRMA</button>
             </form>

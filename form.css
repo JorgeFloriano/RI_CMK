@@ -1,12 +1,11 @@
 @charset "UTF-8";
 
-/*
-paleta de cores
-azul #123251
-cinza #B8B8B8
-dourado #BF9447
-gelo #EFEEEC
-*/
+:root {
+  --blue1: rgb(41, 50, 184);
+  --blue2: rgb(105, 111, 196);
+  --gray1: rgb(198, 194, 194);
+  --gray2: rgb(227, 222, 222);
+}
 
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -14,20 +13,22 @@ gelo #EFEEEC
   margin: 0;
   box-sizing: border-box;
 }
+
   body, html {
       min-height: auto;
       min-width: 450px;
-      background-color: rgb(227, 222, 222);
+      background-color: var(--gray2);
       font-size: 14px;
   }
+
   section#all {
-    width:450px;
+    width:440px;
     margin: auto;
-    padding:10px;
+    padding:5px;
   }
   header {
       display: inline;
-      border:2px solid rgb(41, 50, 184);
+      border:2px solid var(--blue1);
       background-color: white;
       border-radius: 5px;
       height: 55px;
@@ -56,7 +57,7 @@ div#header3 {
 }
 
   section#info {
-      border:2px solid rgb(41, 50, 184);
+      border:2px solid var(--blue1);
       font-size: 12px;
       background-color: white;
       border-radius: 5px;
@@ -66,13 +67,13 @@ div#header3 {
 
 div#legend {
   font-size: 12px;
-  color: rgb(41, 50, 184);
+  color: var(--blue1)
 }
 i.iconl {
   margin-left: 20px;
 }
 section.insp {
-    background-color:rgb(41, 50, 184);
+    background-color:var(--blue1);
     text-align: center;
     border-radius: 5px;
     font-weight: bold;
@@ -82,8 +83,15 @@ section.insp {
     margin: 5px 0;
 }
 
+input {
+  border: 1px solid var(--blue2);
+  border-radius: 2px;
+  padding: 0px 3px;
+  margin: 2px 0px !important;
+  }
+
 section.element {
-    background-color: rgb(105, 111, 196);
+    background-color: var(--blue2);
     text-align: center;
     font-weight: bold;
     font-size: 15px;
@@ -109,13 +117,13 @@ section.ask {
   height: auto;
 }
   div.lab {
-  width: 335px;
+  width: 344px;
   float: left;
 }
 div.opt {
-  color: rgb(198, 194, 194);
+  color: var(--gray1);
   float: right;
-  margin-left: 14px;
+  margin-left: 5px;
 }
 
 input.medido {
@@ -133,13 +141,13 @@ table.med {
 
 .motor {
   text-align: center;
-  border:2px solid rgb(105, 111, 196);
+  border:2px solid var(--blue2);
   border-radius: 5px;
 }
 
 .btn {
-    background-color: rgb(105, 111, 196);
-    border:2px solid rgb(41, 50, 184);
+    background-color: var(--blue2);
+    border:2px solid var(--blue1);
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
@@ -158,28 +166,6 @@ table.med {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.input,
-.textarea {
-  border: 1px solid #ccc;
-  font-family: inherit;
-  font-size: inherit;
-  padding: 1px 6px;
-}
-
-.textarea {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  resize: both;
-  min-height: 20px;
-  line-height: 20px;
-}
-
-.textarea[contenteditable]:empty::before {
-  content: "Ex:Funcionando somente a velocidade baixa na translação";
-  color: gray;
-}
-
 section.obs {
   background-color: white;
   border-radius: 0px 0px 5px 5px;
@@ -191,7 +177,7 @@ section.obs {
 }
 
 textarea {  
-  border-color: rgb(105, 111, 196);
+  border-color: var(--blue2);
   box-sizing: padding-box;
   border-radius: 2px;
   overflow: hidden;
@@ -199,7 +185,54 @@ textarea {
   padding: 2px;
   width: 420px;
 }
-textarea:focus {
-  border-color: rgb(105, 111, 196);
-  outline: 1px solid rgb(105, 111, 196);
+textarea:focus, input:focus {
+  border-color: var(--blue2);
+  outline: 1px solid var(--blue2);
+}
+
+.signature-pad {
+  border: 1px solid var(--blue2);
+  cursor:pointer;
+  border-radius: 4px;
+  margin: auto;
+}
+
+.signature-button {
+  margin-right: 15px;
+  color: var(--blue1);
+  text-decoration: none;
+}
+
+div.signature {
+  background-color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 8px;
+  width: 100%;
+  margin: 5px 0px;
+}
+
+input.itec {
+  width: 330px;
+  float: right;
+  height: 20px;
+}
+label.ltec {
+  float: left;
+  width: 80px;
+  height: 20px;
+  margin: 2px 0px;
+}
+
+.horario {
+  float: left;
+  width: 84px;
+  height: 20px;
+  margin: 2px 0px;
+}
+
+@media (pointer: coarse) {
+  body {
+      overflow: hidden;
+  }
 }

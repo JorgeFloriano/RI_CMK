@@ -97,3 +97,7 @@ function getScrollHeight(elm){
  //         rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 16);
  //         this.rows = minRows + rows;
  //     });
+
+ function blockScreen() {
+   document.querySelector('html').style.overflow = "hidden";
+ }

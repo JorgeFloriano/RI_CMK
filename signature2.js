@@ -1,9 +1,14 @@
+const sc2 = document.querySelector('html');
 const canvas2 = document.querySelector('#canv2');
 const form2 = document.querySelector('#form');
-const clarButton2 = document.querySelector('#clear2');
+const clearButton2 = document.querySelector('#clear2');
+const signButton2 = document.querySelector('#pen2');
+const okButton2 = document.querySelector('#okSign2');
 const ctx2 = canvas2.getContext('2d');
 const image2 = document.querySelector('#idSignTec2');
 let writingMode2 = false;
+let writingModeBtn2 = false;
+sc2.style.overflow = "";
 
 form2.addEventListener('submit', () => {
     const image2URL = canvas2.toDataURL();
@@ -19,10 +24,25 @@ const clearPad2 = () => {
     ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
 }
 
-clarButton2.addEventListener('click', (event) => {
+clearButton2.addEventListener('click', (event) => {
     event.preventDefault();
     clearPad2();
 })
+
+signButton2.addEventListener('click', (event) => {
+    event.preventDefault();
+    sc2.style.overflow = "hidden";
+    writingModeBtn2 = true;
+    canvas2.style.border = "3px solid rgb(105, 111, 196)";
+})
+
+okButton2.addEventListener('click', (event) => {
+    event.preventDefault();
+    sc2.style.overflow = "";
+    writingModeBtn2 = false;
+    canvas2.style.border = "1px solid rgb(105, 111, 196)";
+})
+
 
 const getTargetPositionMobile2 = (event) => {
     positionX = event.touches[0].clientX - event.target.getBoundingClientRect().x;
@@ -39,15 +59,16 @@ const getTargetPosition2 = (event) => {
 }
 
 const handlePointerMove2 = (event) => {
-    if (!writingMode2) return
-
-    if (event.type == 'touchmove') {
-        const [positionX, positionY] = getTargetPositionMobile2(event);
-    } else {
-        const [positionX, positionY] = getTargetPosition2(event);
+    if (writingModeBtn2) {
+        if (!writingMode2) return
+        if (event.type == 'touchmove') {
+            const [positionX, positionY] = getTargetPositionMobile2(event);
+        } else {
+            const [positionX, positionY] = getTargetPosition2(event);
+        }
+        ctx2.lineTo(positionX, positionY);
+        ctx2.stroke();
     }
-    ctx2.lineTo(positionX, positionY);
-    ctx2.stroke();
 }
 
 const handlePointerUp2 = () => {

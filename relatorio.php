@@ -134,18 +134,18 @@
                     <td rowspan="5" style="width: 150px;"></td>
                 </tr>
                 <tr>
-                    <td>Jorge Luis</td>
+                    <td>Nome: <?= $_POST['txtTec1Name'] ?? "Técnico 01"?></td>
                     <td style="width: 150px;" rowspan="4">
                         <img src=<?=$_POST['signTec1']?> alt="imagem" width="100%">
                     </td>
-                    <td>Floriano Silva</td>
+                    <td>Nome: <?= $_POST['txtTec2Name']?? "Técnico 02"?></td>
                     <td style="width: 150px;" rowspan="4">
                         <img src=<?=$_POST['signTec2']?> alt="imagem" width="100%">
                     </td>
                 </tr>
-                <tr><td>Técnico de Manutenção</td><td>Eletromecânico A</td></tr>
-                <tr><td>29/02/2024</td><td>29/02/2024</td></tr>
-                <tr><td>07:00 - 11:00</td><td>07:00 - 11:00</td></tr>
+                <tr><td>Função: <?= $_POST['txtTec1Func'] ?? "Função 01"?></td><td>Função: <?= $_POST['txtTec2Func'] ?? "Função 02"?></td></tr>
+                <tr><td>Data: <?= $_POST['txtTec1Data'] ?? "Data 01"?></td><td>Data: <?= $_POST['txtTec2Data'] ?? "Data 02"?></td></tr>
+                <tr><td>H. Ini.: <?= $_POST['txtTec1HI'] ?? "H. Ini 01"?> / H. Fin.: <?= $_POST['txtTec1HF'] ?? "H. Fim 01"?></td><td>H. Ini.: <?= $_POST['txtTec2HI'] ?? "H. Ini 02"?> / H. Fin.: <?= $_POST['txtTec2HF'] ?? "H. Fim 01"?></td></tr>
             </table>
             <?php 
                 for ($i=1;$i<67;$i++) {
