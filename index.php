@@ -30,7 +30,7 @@
         <main>
             <section id="info">
                 <table>
-                    <tr><td style="width: 130px;">Cliente: <strong>CNH</strong></td><td style="width: 130px;">Unidade: <strong>Sorocaba</strong></td><td>Solicitante: <strong>Lucas M.</strong></td></tr>
+                    <tr><td style="width: 125px;">Cliente: <strong>CNH</strong></td><td style="width: 125px;">Unidade: <strong>Sorocaba</strong></td><td>Solicitante: <strong>Lucas M.</strong></td></tr>
                     <tr><td>Nº Série: <strong>0909090</strong></td><td>Nº Cliente: <strong>CNH-171</strong></td><td>Nº CMK: <strong>54</strong></td></tr>
                     <tr><td>Fabricante: <strong>Demag</strong></td><td>Modelo: <strong>DC-Pro 5</strong></td><td>Capacidade: <strong>500 kg</strong></td></tr>
                     <tr><td>Prédio: <strong>P-80</strong></td><td>Setor: <strong>Montagem</strong></td><td>Área : <strong>Feeder</strong></td></tr>
@@ -80,7 +80,7 @@
                 <section id="trole" class="element">
                     REDUTOR
                 </section>
-                <?php opt('16', 'Vazamento de óleo ( retentores, juntas e bujões )')?>
+                <?php opt('16', 'Vazamento ( retentores, juntas e bujões )')?>
                 <?php opt('17', 'Nível de óleo (completar se necessário)')?>
                 <?php opt('18', 'Ruídos e aquecimento anormal')?>
                 <?php opt('19', 'Reapertar parafusos de fixação')?>
@@ -91,8 +91,8 @@
                 <?php opt('20', 'Limpeza e lubrificação da corrente')?>
                 <?php opt('21', 'Corrente prende, salta ou produz ruído')?>
                 <?php opt('22', 'Amassamentos, estrias, fissuras, respingos de solda, corrosão ou deformação elo a elo')?>
-                <?php opt('23', 'Montagem (verificar se a corrente não está torcida ou com a solda invertida)')?>
-                <?php opt('24', 'Pino de fixação (se houver fissura,deformação ou desgaste visível,o mesmo deve ser substituido)')?>
+                <?php opt('23', 'Montagem (verificar se a corrente não está torcida ou com a posição da solda invertida)')?>
+                <?php opt('24', 'Pino de fixação (substituir no caso de qualquer imperfeição visível)')?>
 
                 <section id="trole" class="element">
                     BLOCO INFERIOR - Capacidade: 500 kg
@@ -111,19 +111,19 @@
                 <section class="item">
                     <table class="med">
                         <tr>
-                            <th style="width: 250px;">NORMA TÉCNICA NBR 1292/1990</th>
+                            <th style="width: 250px;">NORMA NBR 1292/1990</th>
                             <th style="width: 60px;">Nominal</th>
                             <th style="width: 55px">Limite</th>
                             <th>Medido</th>
                         </tr>
                         <tr>
-                            <td>31-Alongamento - Medida de 11 elos</td>
+                            <td>31-Alongam. - Med. 11 elos</td>
                             <td>248</td>
                             <td>253</td>
                             <td><input class="medido" min="248.0" step="0.1" type="number" name="txt31" id="id31"></td>
                         </tr>
                         <tr>
-                            <td>32-Medida DM-Diâmetro médio do elo</td>
+                            <td>32-Diâmetro médio do elo</td>
                             <td>7.4</td>
                             <td>6.7</td>
                             <td><input class="medido" step="0.1" min="0" max="7.4" type="number" name="txt32" id="id32"></td>
@@ -138,7 +138,7 @@
                 <section class="item">
                     <table class="med" style="height: 105px;">
                         <tr>
-                            <th style="width: 250px;" colspan="2">NORMA TÉCNICA NBR 10070/1987</th>
+                            <th style="width: 250px;" colspan="2">NORMA NBR 10070/1987</th>
                             <th style="width: 60px;">Nominal</th>
                             <th style="width: 55px;">Limite</th>
                             <th>Medido</th>
@@ -235,11 +235,11 @@
                 </section>
 
                 <section class="item">
-                    <table class="med" style="height: 270px;">
+                <table class="med" style="height: 270px;">
                     <thead>
                         <tr>
-                            <th style="width: 290px;" colspan="3">VALORES CONSIDERADOS</th>
-                            <th style="width: 75px;">Nominal</th>
+                            <th style="width: 300px;" colspan="3">VALORES CONSIDERADOS</th>
+                            <th style="width: 70px;">Nominal</th>
                             <th>Medido</th>
                         </tr>
                     </thead>
@@ -254,7 +254,7 @@
                         </tr>
                         <tr>
                             <td>68-</td>
-                            <td colspan="2">Tensão do trafo de comando (VCA)</td>
+                            <td colspan="2">Tensão trafo de comando (VCA)</td>
                             <td>24</td>
                             <td>
                                 <input class="medido" step="0.1" min="0" type="number" name="txt68" id="id68">
@@ -262,8 +262,8 @@
                         </tr>
                         <tr>
                             <td>69-</td>
-                            <td colspan="2">Medição do banco de resistências (Ohms)</td>
-                            <td>Não aplica</td>
+                            <td colspan="2">Med. banco de resistências (Ohms)</td>
+                            <td>Ñ aplica</td>
                             <td>
                                 <input class="medido" disabled step="0.1" min="0" type="number" name="txt69" id="id69">
                             </td>
@@ -271,22 +271,22 @@
                         <tr>
                             <td rowspan="3">70-</td>
                             <th rowspan="3" class="motor" >MOTOR DE <br> DIREÇÃO</th>
-                            <td>Corrente da alta (A)</td>
+                            <td>Corr. da alta (A)</td>
                             <td>1.0</td>
                             <td>
                                 <input class="medido" step="0.1" min="0" type="number" name="txt70" id="id70">
                             </td>
                         </tr>
                         <tr>
-                            <td>Corrente da baixa (A)</td>
+                            <td>Corr. da baixa (A)</td>
                             <td>1.0</td>
                             <td>
                                 <input class="medido" step="0.1" min="0" type="number" name="txt70_2" id="id70_2">
                             </td>
                         </tr>
                         <tr>
-                            <td>Tensão do freio (VCC)</td>
-                            <td>Não aplica</td>
+                            <td>Tensão freio (VCC)</td>
+                            <td>Ñ aplica</td>
                             <td>
                                 <input class="medido" disabled step="0.1" min="0" type="number" name="txt70_3" id="id70_3">
                             </td>
@@ -294,28 +294,35 @@
                         <tr>
                             <td rowspan="3">71-</td>
                             <th rowspan="3" class="motor" >MOTOR DE <br> ELEVAÇÃO</th>
-                            <td>Corrente da alta (A)</td>
+                            <td>Corr. da alta (A)</td>
                             <td>1.8</td>
                             <td>
                                 <input class="medido" step="0.1" min="0" type="number" name="txt71" id="id71">
                             </td>
                         </tr>
                         <tr>
-                            <td>Corrente da baixa (A)</td>
+                            <td>Corr. da baixa (A)</td>
                             <td>2.8</td>
                             <td>
                                 <input class="medido" step="0.1" min="0" type="number" name="txt71_2" id="id71_2">
                             </td>
                         </tr>
                         <tr>
-                            <td>Tensão do freio (VCC)</td>
+                            <td>Tensão freio (VCC)</td>
                             <td>190</td>
                             <td>
                                 <input class="medido" step="0.1" min="0" type="number" name="txt71_3" id="id71_3">
                             </td>
                         </tr>
                     </tbody>
-                    </table>
+                </table>
+                </section>
+
+                <section class="item" style="flex-direction: column;">
+                    <div>
+                        <strong>OBSERVAÇÕES GERAIS E SERVIÇOS EXECUTADOS: </strong>
+                        <textarea name="observacoes" id="observacoes" class='autoExpand' rows='1' data-min-rows='1'></textarea>
+                    </div>
                 </section>
 
                 <section class="item" style="flex-direction: column;">
@@ -358,11 +365,11 @@
                     </div>
                     <section id="secRessalva" class="obs">
                         <label for="idressalvas"><strong>RESSALVAS:</strong></label>
-                        <textarea name="ressalvas" id="idressalvas" class='autoExpand' rows='1' data-min-rows='1' placeholder='Exemplo: Movimento de elevação apenas com a velocidade baixa.' autofocus></textarea>
+                        <textarea name="ressalvas" id="idressalvas" class='autoExpand' rows='1' data-min-rows='1' placeholder='Ex.: Elevação apenas com a velocidade baixa.'></textarea>
                     </section>
                 </section>
 
-                <div id="infoTec1" class="signature">
+                <div id="infoTec1" class="infoTec">
                     <p><b>APONTAMENTO DO TÉCNICO 1</b></p>
                     <div class="itInfTec">
                         <label class="ltec" for="tec1Name">Nome: </label>
@@ -378,23 +385,23 @@
                     </div>
                     <div class="itInfTec">
                         <label class="horario" for="tec1HI">H. inicial: </label>
-                        <input class="horario" type="time" name="txtTec1HI" id="tec1HI" style="width: 120px;">
+                        <input class="horario" type="time" name="txtTec1HI" id="tec1HI" style="width: 110px;">
                         <label class="horario" for="tec1HF" style="margin-left: 5px;">H. final: </label>
-                        <input class="horario" type="time" name="txtTec1HF" id="tec1HF" style="width: 120px;">
+                        <input class="horario" type="time" name="txtTec1HF" id="tec1HF" style="width: 110px;">
                     </div>
-                    <div class="itInfTec">
-                        <label class="ltec" for="canv1">Assinatura:</label>
-                        <canvas height="200" width="410" class="signature-pad" id="canv1"></canvas>
+                    <div class="signature">
                         <p>
                             <a id="pen1" href="#" class="signature-button"><i class="fa fa-pencil" aria-hidden="true"></i>Assinar </a>
                             <a id="okSign1" href="#" class="signature-button"><i class="fa fa-check" aria-hidden="true"></i>Ok </a>
                             <a id="clear1" href="#" class="signature-button"><i class="fa fa-eraser" aria-hidden="true"></i>Apagar </a>
                         </p>
+                        <canvas height="200" width="370%" class="signature-pad" id="canv1"></canvas>
+                       
                         <input type="hidden" name="signTec1" id="idSignTec1">
                     </div>
                 </div>
 
-                <div id="infoTec2" class="signature">
+                <div id="infoTec2" class="infoTec">
                     <p><b>APONTAMENTO DO TÉCNICO 2</b></p>
                     <div class="itInfTec">
                         <label class="ltec" for="tec2Name">Nome: </label>
@@ -410,18 +417,17 @@
                     </div>
                     <div class="itInfTec">
                         <label class="horario" for="tec2HI">H. inicial: </label>
-                        <input class="horario" type="time" name="txtTec2HI" id="tec2HI" style="width: 120px;">
+                        <input class="horario" type="time" name="txtTec2HI" id="tec2HI" style="width: 110px;">
                         <label class="horario" for="tec2HF" style="margin-left: 5px;">H. final: </label>
-                        <input class="horario" type="time" name="txtTec2HF" id="tec2HF" style="width: 120px;">
+                        <input class="horario" type="time" name="txtTec2HF" id="tec2HF" style="width: 110px;">
                     </div>
-                    <div class="itInfTec">
-                        <label class="ltec" for="canv2">Assinatura:</label>
-                        <canvas height="200" width="410" class="signature-pad" id="canv2"></canvas>
+                    <div class="signature">
                         <p>
                             <a id="pen2" href="#" class="signature-button"><i class="fa fa-pencil" aria-hidden="true"></i>Assinar </a>
                             <a id="okSign2" href="#" class="signature-button"><i class="fa fa-check" aria-hidden="true"></i>Ok </a>
                             <a id="clear2" href="#" class="signature-button"><i class="fa fa-eraser" aria-hidden="true"></i>Apagar </a>
                         </p>
+                        <canvas height="200" width="370" class="signature-pad" id="canv2" aria-placeholder="assine aqui"></canvas>
                         <input type="hidden" name="signTec2" id="idSignTec2">
                     </div>
                 </div>

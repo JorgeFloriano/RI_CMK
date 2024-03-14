@@ -19,7 +19,7 @@
             </section>
             <section style="display: none;" class="obs" name="txtSecJust<?= $i?>" id="secJust<?= $i?>">
                 <label style="margin-right: 100px;" for="idJust<?= $i?>">Justificativa:</label>
-                <textarea name="txtJust<?= $i?>" id="idJust<?= $i?>" class='autoExpand' rows='1' data-min-rows='1' autofocus></textarea>
+                <textarea name="txtJust<?= $i?>" id="idJust<?= $i?>" class='autoExpand' rows='1' data-min-rows='1'></textarea>
             </section>
         </section>
     <?php }

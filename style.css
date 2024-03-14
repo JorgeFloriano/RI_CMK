@@ -127,7 +127,26 @@ gelo #EFEEEC
   table td {
       padding:0px 2px;
       display:table-cell;
-     
   }
+
+  #cab {
+    border: 1px solid black;
+    border-bottom: none;
+    padding: 5px;
+    height: 50px;
+}
+
+  #verso {
+    width:750px;
+    margin: auto;
+    
+  }
+  #versoObs {
+    border: 1px solid black;
+    border-top: none;
+    font-size: 10.5px;
+    padding: 5px;
+  }
+
   
   

@@ -4,7 +4,7 @@
   --blue1: rgb(41, 50, 184);
   --blue2: rgb(105, 111, 196);
   --gray1: rgb(198, 194, 194);
-  --gray2: rgb(227, 222, 222);
+  --gray2: rgb(241, 234, 234);
 }
 
 * {
@@ -16,13 +16,13 @@
 
   body, html {
       min-height: auto;
-      min-width: 450px;
+      min-width: 410px;
       background-color: var(--gray2);
       font-size: 14px;
   }
 
   section#all {
-    width:440px;
+    width:400px;
     margin: auto;
     padding:5px;
   }
@@ -40,7 +40,7 @@
   }
   div#header1 {
     float: left;
-    width: 110px;
+    width: 98px;
   }
   div#header2 {
     float: left;
@@ -51,9 +51,8 @@
 div#header3 {
   float: right;
   text-align: right;
-  font-size: 15px;
+  font-size: 11px;
   font-weight: bold;
-  margin-top: 10px;
 }
 
   section#info {
@@ -66,7 +65,7 @@ div#header3 {
 }
 
 div#legend {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--blue1)
 }
 i.iconl {
@@ -117,7 +116,7 @@ section.ask {
   height: auto;
 }
   div.lab {
-  width: 344px;
+  width: 305px;
   float: left;
 }
 div.opt {
@@ -183,7 +182,7 @@ textarea {
   overflow: hidden;
   display: block;
   padding: 2px;
-  width: 420px;
+  width: 100%;
 }
 textarea:focus, input:focus {
   border-color: var(--blue2);
@@ -203,7 +202,7 @@ textarea:focus, input:focus {
   text-decoration: none;
 }
 
-div.signature {
+div.infoTec {
   background-color: white;
   border-radius: 5px;
   font-size: 14px;
@@ -213,24 +212,32 @@ div.signature {
 }
 
 input.itec {
-  width: 330px;
+  width: 300px;
   float: right;
   height: 20px;
+  margin: 2px 0px;
 }
 label.ltec {
   float: left;
-  width: 80px;
+  width: 70px;
   height: 20px;
   margin: 2px 0px;
 }
 
 .horario {
   float: left;
-  width: 84px;
+  width: 74px;
   height: 20px;
   margin: 2px 0px;
 }
+div.itInfTec {
+  margin: 8px 0px;
+  height: 20px;
+}
 
+div.signature {
+  margin: 14px 0px -5px 0px;
+}
 @media (pointer: coarse) {
   body {
       overflow: hidden;

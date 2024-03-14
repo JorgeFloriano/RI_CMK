@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Relatorio de Inspeção</title>
 </head>
+<?php 
+    $date1 = date_create($_POST['txtTec1Data']);
+    $datebr1 = date_format($date1, 'd/m/Y');
+
+    $date2 = date_create($_POST['txtTec2Data']);
+    $datebr2 = date_format($date2, 'd/m/Y');
+?>
 <body>
     <section id="relatorio">
         <header>
@@ -125,7 +132,7 @@
             <section id="ressalvas">
                 <strong>Ressalvas:</strong> <?= $_POST['ressalvas'] ?? "Sem ressalvas!"?>
             </section>
-            <table style="border-top: hidden;">
+            <table style="border-top: hidden;margin-bottom: 200px;">
                 <tr>
                     <th>Assinatura do cliente.</th>
                     <th colspan="6">Apontamento de Horas e relação dos técnicos</th>
@@ -144,16 +151,73 @@
                     </td>
                 </tr>
                 <tr><td>Função: <?= $_POST['txtTec1Func'] ?? "Função 01"?></td><td>Função: <?= $_POST['txtTec2Func'] ?? "Função 02"?></td></tr>
-                <tr><td>Data: <?= $_POST['txtTec1Data'] ?? "Data 01"?></td><td>Data: <?= $_POST['txtTec2Data'] ?? "Data 02"?></td></tr>
-                <tr><td>H. Ini.: <?= $_POST['txtTec1HI'] ?? "H. Ini 01"?> / H. Fin.: <?= $_POST['txtTec1HF'] ?? "H. Fim 01"?></td><td>H. Ini.: <?= $_POST['txtTec2HI'] ?? "H. Ini 02"?> / H. Fin.: <?= $_POST['txtTec2HF'] ?? "H. Fim 01"?></td></tr>
+                <tr><td>Data: <?= $datebr1 ?? "Data 01"?></td><td>Data: <?= $datebr2 ?? "Data 02"?></td></tr>
+                <tr><td>H. Inicial: <?= $_POST['txtTec1HI'] ?? "H. Ini 01"?> / H. Final: <?= $_POST['txtTec1HF'] ?? "H. Fim 01"?></td><td>H. Inicial: <?= $_POST['txtTec2HI'] ?? "H. Ini 02"?> / H. Final: <?= $_POST['txtTec2HF'] ?? "H. Fim 01"?></td></tr>
             </table>
-            <?php 
-                for ($i=1;$i<67;$i++) {
-                    if (isset($_POST['txtJust'.$i]) && $_POST['txtJust'.$i] !== '') {
-                        echo "Ítem $i: ". $_POST['txtJust'.$i]."<br>";
-                    }
-                }
-                ?>
+
+            <section id="verso">
+                <section id="cab">
+                    <div id="header1">
+                        <img src="logo_cmk.jpg" alt="logo cmk" width="80px">
+                    </div>
+                    <div id="header2">
+                        <div>INSTRUÇÃO DE INSPEÇÃO</div>
+                        <div>TALHA ELÉTRICA DE CORRENTE</div>
+                    </div>
+                    <div id="header3">
+                        RI Nº 000
+                    </div>
+                </section>
+                <table id="tabVerso">
+                    <tr>
+                        <th colspan="4">Relação de pendências do equipamento</th>
+                    </tr>
+                    <tr>
+                        <th>Ítem</th><th style="width: 620px;">Descrição</th><th>R.I.</th><th>Data</th>
+                    </tr>
+                    <?php
+                        for ($i=1;$i<67;$i++) {
+                            if (isset($_POST['txtJust'.$i]) && $_POST['txtJust'.$i] !== '') {
+                                echo "<tr>
+                                    <td>".$i."</td>
+                                    <td>".$_POST['txtJust'.$i]. "</td>
+                                    <td>000</td>
+                                    <td>".date("d/m/Y")."</td></tr>";
+                            }
+                        }
+                    ?>
+                <tr>
+                    <th colspan="4">Observações gerais e serviços executados durante a inspeção</th>
+                </tr>
+                </table>
+                <div id="versoObs">
+                        <p> 
+                            <?= $_POST['observacoes'] ?? "Sem observações"?>
+                        </p>
+                </div>
+                <table style="border-top: hidden;margin-bottom: 200px;">
+                    <tr>
+                        <th>Assinatura do cliente.</th>
+                        <th colspan="6">Apontamento de Horas e relação dos técnicos</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="5" style="width: 150px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Nome: <?= $_POST['txtTec1Name'] ?? "Técnico 01"?></td>
+                        <td style="width: 150px;" rowspan="4">
+                            <img src=<?=$_POST['signTec1']?> alt="imagem" width="100%">
+                        </td>
+                        <td>Nome: <?= $_POST['txtTec2Name']?? "Técnico 02"?></td>
+                        <td style="width: 150px;" rowspan="4">
+                            <img src=<?=$_POST['signTec2']?> alt="imagem" width="100%">
+                        </td>
+                    </tr>
+                    <tr><td>Função: <?= $_POST['txtTec1Func'] ?? "Função 01"?></td><td>Função: <?= $_POST['txtTec2Func'] ?? "Função 02"?></td></tr>
+                    <tr><td>Data: <?= $datebr1 ?? "Data 01"?></td><td>Data: <?= $datebr2 ?? "Data 02"?></td></tr>
+                    <tr><td>H. Inicial: <?= $_POST['txtTec1HI'] ?? "H. Ini 01"?> / H. Final: <?= $_POST['txtTec1HF'] ?? "H. Fim 01"?></td><td>H. Inicial: <?= $_POST['txtTec2HI'] ?? "H. Ini 02"?> / H. Final: <?= $_POST['txtTec2HF'] ?? "H. Fim 01"?></td></tr>
+                </table>
+            </section>
         </main>
     </section>
 </body>
