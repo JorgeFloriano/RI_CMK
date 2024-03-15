@@ -152,7 +152,7 @@
                 </tr>
                 <tr><td>Função: <?= $_POST['txtTec1Func'] ?? "Função 01"?></td><td>Função: <?= $_POST['txtTec2Func'] ?? "Função 02"?></td></tr>
                 <tr><td>Data: <?= $datebr1 ?? "Data 01"?></td><td>Data: <?= $datebr2 ?? "Data 02"?></td></tr>
-                <tr><td>H. Inicial: <?= $_POST['txtTec1HI'] ?? "H. Ini 01"?> / H. Final: <?= $_POST['txtTec1HF'] ?? "H. Fim 01"?></td><td>H. Inicial: <?= $_POST['txtTec2HI'] ?? "H. Ini 02"?> / H. Final: <?= $_POST['txtTec2HF'] ?? "H. Fim 01"?></td></tr>
+                <tr><td>Início: <?= $_POST['txtTec1HI'] ?? "H. Ini 01"?>h / Final: <?= $_POST['txtTec1HF'] ?? "H. Fim 01"?>h</td><td>Início: <?= $_POST['txtTec2HI'] ?? "H. Ini 02"?>h / Final: <?= $_POST['txtTec2HF'] ?? "H. Fim 01"?>h</td></tr>
             </table>
 
             <section id="verso">
@@ -168,16 +168,18 @@
                         RI Nº 000
                     </div>
                 </section>
-                <table id="tabVerso">
+                <table id="tabVerso" class="z">
                     <tr>
-                        <th colspan="4">Relação de pendências do equipamento</th>
+                        <th colspan="4">Relação de pendências do equipamento:</th>
                     </tr>
                     <tr>
                         <th>Ítem</th><th style="width: 620px;">Descrição</th><th>R.I.</th><th>Data</th>
                     </tr>
                     <?php
+                        $contpend = 0;
                         for ($i=1;$i<67;$i++) {
                             if (isset($_POST['txtJust'.$i]) && $_POST['txtJust'.$i] !== '') {
+                                $contpend++;
                                 echo "<tr>
                                     <td>".$i."</td>
                                     <td>".$_POST['txtJust'.$i]. "</td>
@@ -185,9 +187,15 @@
                                     <td>".date("d/m/Y")."</td></tr>";
                             }
                         }
+                        $linvaz = 21 - $contpend;
+                        for ($i=1;$i<$linvaz;$i++) {
+                            echo "<tr><td>---</td>
+                            <td> </td>
+                            <td>---</td><td>---</td></tr>";
+                        }
                     ?>
                 <tr>
-                    <th colspan="4">Observações gerais e serviços executados durante a inspeção</th>
+                    <th colspan="4">Observações gerais e serviços executados durante a inspeção:</th>
                 </tr>
                 </table>
                 <div id="versoObs">
@@ -215,7 +223,7 @@
                     </tr>
                     <tr><td>Função: <?= $_POST['txtTec1Func'] ?? "Função 01"?></td><td>Função: <?= $_POST['txtTec2Func'] ?? "Função 02"?></td></tr>
                     <tr><td>Data: <?= $datebr1 ?? "Data 01"?></td><td>Data: <?= $datebr2 ?? "Data 02"?></td></tr>
-                    <tr><td>H. Inicial: <?= $_POST['txtTec1HI'] ?? "H. Ini 01"?> / H. Final: <?= $_POST['txtTec1HF'] ?? "H. Fim 01"?></td><td>H. Inicial: <?= $_POST['txtTec2HI'] ?? "H. Ini 02"?> / H. Final: <?= $_POST['txtTec2HF'] ?? "H. Fim 01"?></td></tr>
+                    <tr><td>Início: <?= $_POST['txtTec1HI'] ?? "H. Ini 01"?>h / Final: <?= $_POST['txtTec1HF'] ?? "H. Fim 01"?>h</td><td>Início: <?= $_POST['txtTec2HI'] ?? "H. Ini 02"?>h / Final: <?= $_POST['txtTec2HF'] ?? "H. Fim 01"?>h</td></tr>
                 </table>
             </section>
         </main>

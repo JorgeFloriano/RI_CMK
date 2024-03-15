@@ -381,7 +381,7 @@
                     </div>
                     <div class="itInfTec">
                         <label class="ltec" for="tec1data">Data: </label>
-                        <input class="itec " type="date" name="txtTec1Data" id="tec1data">
+                        <input class="itec" type="date" name="txtTec1Data" id="tec1data" max="<?= date("Y-m-d")?>">
                     </div>
                     <div class="itInfTec">
                         <label class="horario" for="tec1HI">H. inicial: </label>
@@ -413,13 +413,15 @@
                     </div>
                     <div class="itInfTec">
                         <label class="ltec" for="tec2data">Data: </label>
-                        <input class="itec " type="date" name="txtTec2Data" id="tec2data">
+                        <input class="itec " type="date" name="txtTec2Data" id="tec2data" max="<?= date("Y-m-d")?>">
                     </div>
                     <div class="itInfTec">
                         <label class="horario" for="tec2HI">H. inicial: </label>
-                        <input class="horario" type="time" name="txtTec2HI" id="tec2HI" style="width: 110px;">
+                        <input class="horario" type="time" name="txtTec2HI" id="tec2HI" style="width: 110px;"
+                        >
                         <label class="horario" for="tec2HF" style="margin-left: 5px;">H. final: </label>
-                        <input class="horario" type="time" name="txtTec2HF" id="tec2HF" style="width: 110px;">
+                        <input class="horario" type="time" name="txtTec2HF" id="tec2HF" style="width: 110px;" 
+                        >
                     </div>
                     <div class="signature">
                         <p>
@@ -432,7 +434,9 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn">CONFIRMA</button>
+                <button onclick="unlockScreen(),
+                                 limitDate('tec1data','tec1HI','tec1HF'),
+                                 limitDate('tec2data','tec2HI','tec2HF')" type="submit" class="btn">CONFIRMA</button>
             </form>
             <script src="signature.js"></script>
             <script src="signature2.js"></script>

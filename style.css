@@ -104,15 +104,15 @@ gelo #EFEEEC
   /* table.w3-half {
       width: 375;
   } */
-  /* .w3-striped tbody tr:nth-child(even){ 
+  .w3-striped tbody tr:nth-child(even){ 
       background-color:#ececf8
   }
-  table tr:nth-child(odd) {
+  table.z tr:nth-child(odd) {
       background-color:#fff
   }
-  table tr:nth-child(even){
-      background-color:#ececf8
-  } */
+  table.z tr:nth-child(even){
+      background-color:#f0f0f3b2
+  }
   .w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover {
       background-color:#ccc
   }.w3-centered tr th,.w3-centered tr td, thead, th {
@@ -139,13 +139,13 @@ gelo #EFEEEC
   #verso {
     width:750px;
     margin: auto;
-    
   }
   #versoObs {
     border: 1px solid black;
     border-top: none;
     font-size: 10.5px;
     padding: 5px;
+    min-height: 300px;
   }
 
   

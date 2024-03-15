@@ -101,3 +101,23 @@ function getScrollHeight(elm){
  function blockScreen() {
    document.querySelector('html').style.overflow = "hidden";
  }
+
+ function unlockScreen() {
+   document.querySelector('html').style.overflow = "";
+ }
+
+ function limitDate(d, hi, hf) {
+   var date = document.getElementById(d);
+   var hini = document.getElementById(hi);
+   var hfin = document.getElementById(hf);
+   dataAtual = new Date();
+   const hor = dataAtual.getHours();
+   const min = dataAtual.getMinutes();
+   if (date.value == date.max) {
+      hini.max = hor + ":" + min;
+      hfin.max = hor + ":" + min;
+   } else {
+      hini.max = '';
+      hfin.max = '';
+   }
+ }
