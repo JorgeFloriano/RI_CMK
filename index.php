@@ -321,7 +321,7 @@
                 <section class="item" style="flex-direction: column;">
                     <div>
                         <strong>OBSERVAÇÕES GERAIS E SERVIÇOS EXECUTADOS: </strong>
-                        <textarea name="observacoes" id="observacoes" class='autoExpand' rows='1' data-min-rows='1'></textarea>
+                        <textarea name="txtObservacoes" id="observacoes" class='autoExpand' rows='1' data-min-rows='1'></textarea>
                     </div>
                 </section>
 
@@ -351,21 +351,21 @@
                     </div>
                     <div >
                         <div onclick="displayoff('secRessalva', 'secApto', 'idressalvas')">
-                            <input type="radio" name="apto" id="apto" value="SIM">
+                            <input type="radio" name="apto" id="apto" value="APTO PARA OPERAR">
                             <label for="apto">SIM</label>
                         </div>
                         <div onclick="displayoff('secRessalva', 'secApto', 'idressalvas')">
-                            <input type="radio" name="apto" id="nApto" value="NÃO">
+                            <input type="radio" name="apto" id="nApto" value="NÃO APTO PARA OPERAR">
                             <label for="nApto">NÃO</label>
                         </div>
                         <div onclick="displayon('secRessalva', 'secApto')">
-                            <input type="radio" name="apto" id="aptoCR" value="SIM COM RESSALVAS">
+                            <input type="radio" name="apto" id="aptoCR" value="APTO PARA OPERAR COM RESSALVAS">
                             <label for="aptoCR">SIM COM RESSALVAS</label>
                         </div>
                     </div>
                     <section id="secRessalva" class="obs">
                         <label for="idressalvas"><strong>RESSALVAS:</strong></label>
-                        <textarea name="ressalvas" id="idressalvas" class='autoExpand' rows='1' data-min-rows='1' placeholder='Ex.: Elevação apenas com a velocidade baixa.'></textarea>
+                        <textarea name="txtRessalvas" id="idressalvas" class='autoExpand' rows='1' data-min-rows='1' placeholder='Ex.: Elevação apenas com a velocidade baixa.'></textarea>
                     </section>
                 </section>
 
@@ -373,11 +373,11 @@
                     <p><b>APONTAMENTO DO TÉCNICO 1</b></p>
                     <div class="itInfTec">
                         <label class="ltec" for="tec1Name">Nome: </label>
-                        <input class="itec" type="text" name="txtTec1Name" id="tec1Name">
+                        <input class="itec" type="text" name="txtTec1Name" id="tec1Name" required>
                     </div>
                     <div class="itInfTec">
                         <label class="ltec" for="tec1Func">Função: </label>
-                        <input class="itec" type="text" name="txtTec1Func" id="tec1Func">
+                        <input class="itec" type="text" name="txtTec1Func" id="tec1Func" required>
                     </div>
                     <div class="itInfTec">
                         <label class="ltec" for="tec1data">Data: </label>
@@ -434,9 +434,7 @@
                     </div>
                 </div>
 
-                <button onclick="unlockScreen(),
-                                 limitDate('tec1data','tec1HI','tec1HF'),
-                                 limitDate('tec2data','tec2HI','tec2HF')" type="submit" class="btn">CONFIRMA</button>
+                <button onclick="unlockScreen(),limitDate('tec2data','tec2HI','tec2HF'),limitDate('tec1data','tec1HI','tec1HF')" type="submit" class="btn">CONFIRMA</button>
             </form>
             <script src="signature.js"></script>
             <script src="signature2.js"></script>

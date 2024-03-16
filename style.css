@@ -24,14 +24,16 @@ gelo #EFEEEC
     padding:10px;
   }
   header {
-      display: inline;
-      border-top:1px solid black;
-      border-right:1px solid black;
-      border-left:1px solid black;
-      height: 50px;
-      padding: 5px;
+      height: 95px;
   }
   
+  div#h {
+    border: 1px solid black;
+    border-bottom: hidden;
+    padding: 5px;
+    height: 52px;
+  }
+
   div#header1 {
       float: left;
       width: 250px;
@@ -47,14 +49,19 @@ gelo #EFEEEC
       text-align: right;
       font-size: 17px;
       font-weight: bold;
-      margin-top: 8px;
   }
   section#medicoes {
     display: inline;
   }
+
+  section#elements {
+    display: inline;
+  }
+
   table.half {
     float: left;
     width: 50%;
+    border-bottom: hidden;
   }
 
   section#status {
@@ -65,17 +72,15 @@ gelo #EFEEEC
   }
   div#status1 {
     float: left;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    width: 49.99%;
+    border: 1px solid black;
+    border-right: hidden;
+    width: 50%;
     padding: 2px;
   }
   div#status2 {
     float: left;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    width: 50.01%;
+    border: 1px solid black;
+    width: 50%;
     padding: 2px;
   }
   section#ressalvas {
