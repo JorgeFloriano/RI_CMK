@@ -14,40 +14,45 @@
   box-sizing: border-box;
 }
 
-  body, html {
-      min-height: auto;
-      min-width: 410px;
-      background-color: var(--gray2);
-      font-size: 14px;
-  }
-
-  section#all {
-    width:400px;
-    margin: auto;
-    padding:5px;
-  }
-  header {
-      display: inline;
-      border:2px solid var(--blue1);
-      background-color: white;
-      border-radius: 5px;
-      height: 55px;
-      padding: 5px;
-      margin: 5px 0;
-  }
-  main {
-    font-size: 17px;
-  }
-  div#header1 {
-    float: left;
-    width: 98px;
-  }
-  div#header2 {
-    float: left;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px;
+body, html {
+  min-height: auto;
+  min-width: 410px;
+  background-color: var(--gray2);
+  font-size: 14px;
 }
+
+section#all {
+  width:400px;
+  margin: auto;
+  padding:5px;
+}
+
+header#hForm {
+  border:2px solid var(--blue1);
+  background-color: white;
+  border-radius: 5px;
+  height: 55px;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+main {
+  font-size: 17px;
+}
+
+div#header1 {
+  float: left;
+  width: 98px;
+}
+
+div#header2 {
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
 div#header3 {
   float: right;
   text-align: right;
@@ -55,31 +60,33 @@ div#header3 {
   font-weight: bold;
 }
 
-  section#info {
-      border:2px solid var(--blue1);
-      font-size: 12px;
-      background-color: white;
-      border-radius: 5px;
-      margin: 5px 0;
-      padding: 5px;
+section#info {
+  border:2px solid var(--blue1);
+  font-size: 11px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px;
 }
 
 div#legend {
   font-size: 10px;
   color: var(--blue1)
 }
+
 i.iconl {
   margin-left: 20px;
 }
+
 section.insp {
-    background-color:var(--blue1);
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 15px;
-    color: white;
-    padding: 5px;
-    margin: 5px 0;
+  background-color:var(--blue1);
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  padding: 5px;
+  margin: 5px 0;
 }
 
 input {
@@ -87,17 +94,17 @@ input {
   border-radius: 2px;
   padding: 0px 3px;
   margin: 2px 0px !important;
-  }
+}
 
 section.element {
-    background-color: var(--blue2);
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
-    border-radius: 5px;
-    color: white;
-    margin: 3px 0px 5px 0px;
-    padding: 5px;
+  background-color: var(--blue2);
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 5px;
+  color: white;
+  margin: 3px 0px 5px 0px;
+  padding: 5px;
 }
 
 section.item {
@@ -115,10 +122,12 @@ section.ask {
   vertical-align: bottom;
   height: auto;
 }
+
   div.lab {
   width: 305px;
   float: left;
 }
+
 div.opt {
   color: var(--gray1);
   float: right;
@@ -134,6 +143,7 @@ input.medido {
 table.med, table.med > th {
   text-align: left;
 }
+
 table.med {
   height: 80px;
 }
@@ -145,14 +155,14 @@ table.med {
 }
 
 .btn {
-    background-color: var(--blue2);
-    border:2px solid var(--blue1);
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
-    padding: 5px;
-    margin: 5px 0;
+  background-color: var(--blue2);
+  border:2px solid var(--blue1);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+  margin: 5px 0;
 }
 
 .fa {

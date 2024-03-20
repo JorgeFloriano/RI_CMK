@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="functions.js"></script>
-    <?php require_once("functions.php")?>
-    <style>
-       
-    </style>
-    <title>Relatório de Inspeção</title>
+<?php require_once("head.php");?>
+<link rel="stylesheet" href="form.css">
+<?php require_once("functions.php");?>
+<script src="functions.js"></script>
+<title>Relatório de Inspeção</title>
 </head>
 <body id="body">
     <section id="all">
-        <header>
+        <header id="hForm">
             <div id="header1">
                 <img src="logo_cmk.jpg" alt="logo cmk" width="80px">
             </div>
@@ -29,20 +20,20 @@
         </header>
         <main>
             <section id="info">
-                <table>
-                    <tr><td style="width: 125px;">Cliente: <strong>CNH</strong></td><td style="width: 125px;">Unidade: <strong>Sorocaba</strong></td><td>Solicitante: <strong>Lucas M.</strong></td></tr>
+                <table style="width: 100%;">
+                    <tr><td style="width: 115px;">Cliente: <strong>CNH</strong></td><td style="width: 125px;">Unidade: <strong>Sorocaba</strong></td><td>Solicitante: <strong>Lucas M.</strong></td></tr>
                     <tr><td>Nº Série: <strong>0909090</strong></td><td>Nº Cliente: <strong>CNH-171</strong></td><td>Nº CMK: <strong>54</strong></td></tr>
                     <tr><td>Fabricante: <strong>Demag</strong></td><td>Modelo: <strong>DC-Pro 5</strong></td><td>Capacidade: <strong>500 kg</strong></td></tr>
                     <tr><td>Prédio: <strong>P-80</strong></td><td>Setor: <strong>Montagem</strong></td><td>Área : <strong>Feeder</strong></td></tr>
                 </table>
-            <div id="legend">
-                <p>
-                    Legenda: 
-                    <i class="fa fa-thumbs-up iconl" style="margin-left: 0px;"></i>Ok 
-                    <i class="fa fa-wrench iconl"></i>Recuperar
-                    <i class="fa fa-thumbs-down iconl"></i>Trocar
-                </p>
-            </div>
+                <div id="legend">
+                    <p>
+                        Legenda: 
+                        <i class="fa fa-thumbs-up iconl" style="margin-left: 0px;"></i>Ok 
+                        <i class="fa fa-wrench iconl"></i>Recuperar
+                        <i class="fa fa-thumbs-down iconl"></i>Trocar
+                    </p>
+                </div>
             </section>
             <form id="form" action="relatorio.php" method="post">
 
@@ -144,7 +135,7 @@
                             <th>Medido</th>
                         </tr>
                         <tr>
-                            <td rowspan="3">Figura do gancho</td>
+                            <td rowspan="3"><img src="Gancho.png" alt="figura do gancho" width="80px"></td>
                             <td>33-Medida W1</td>
                             <td>41</td>
                             <td>45.1</td>

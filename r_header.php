@@ -1,4 +1,4 @@
-<header>
+<div class="header">
     <div id="h">
         <div id="header1">
             <img src="logo_cmk.jpg" alt="logo cmk" width="80px">
@@ -21,4 +21,4 @@
             </tr>
         </thead>
     </table>
-</header>
+</div>
