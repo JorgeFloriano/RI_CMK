@@ -17,12 +17,12 @@
                     <tr><th colspan="3">INSPEÇÃO MECÂNICA</th></tr>
                     <tr><th colspan="2">TROLE</th><th style="width: 20%;">500 kg</th></tr>
                     <?php reportElement(1,[
-                        "Rodas e rolamentos (Não aplica)",
-                        "Fixação da talha e parafusos de fechamento (Não aplica)",
-                        "Batentes fim de curso (Não aplica)",
-                        "Motor (fixação e ruidos anormais)",
-                        "Freio (regular se necessário)",
-                        "Redutor (vazamento, aquecimento)"
+                        "Rodas e rolamentos",
+                        "Fixação da talha e parafusos de fechamento",
+                        "Batentes fim de curso",
+                        "Motor (não aplica)",
+                        "Freio (não aplica)",
+                        "Redutor (não aplica)"
                     ])?>
                     <tr><th colspan="2">TALHA</th><th>500 kg</th></tr>
                     <?php reportElement(7,[
@@ -80,13 +80,17 @@
             
                     <tr><th colspan="6">MEDIÇÕES DO GANCHO INFERIOR (mm)</th></tr>
                     <tr>
-                        <th colspan="3" rowspan="2" style="width: 55%;">NORMA TÉCNICA <br> NBR 10070/1987</th>
+                        <th rowspan="2">--</th>
+                        <td rowspan="5" style="width: 19%;">
+                            <img src="gancho.jpg" alt="figura do gancho" width="60px">
+                        </td>
+                        <th rowspan="2">NORMA TÉCNICA <br> NBR 10070/1987</th>
                         <th colspan="3">Medidas conforme a norma</th>
                     </tr>
                     <tr><th>Nominal</th><th>Máximo</th><th>Medido</th></tr>
             
                     <tr>
-                        <td>33</td><td rowspan="4"><img src="Gancho.png" alt="figura do gancho" width="40px"></td>
+                        <td>33</td>
                         <td>Medida W1</td><td>41</td><td>45.1</td><td><?= isEmpty(33) ?></td>
                     </tr>
                     <tr><td>34</td><td>Medida Y</td><td>28</td><td>23.6</td><td><?= isEmpty(34) ?></td></tr>
@@ -108,8 +112,8 @@
                         "Contatores e contatos",
                         "Trafos de potência e comando",
                         "Bornes e terminais",
-                        "Banco de resistência (Não aplica)",
-                        "Célula de carga (Não aplica)"
+                        "Banco de resistência (não aplica)",
+                        "Célula de carga (não aplica)"
                     ])?>
                     <tr><th colspan="2">BOTOEIRA</th><th></th></tr>
                     <?php reportElement(48,[
@@ -165,7 +169,7 @@
 
         <section id="status">
             <div id="status1">STATUS FINAL DA INSPEÇÃO: <?= $_POST['status'] ?? "RESTAM PENDÊNCIAS"?>!</div>
-            <div id="status2" class="<?= $color?>">STATUS DO EQUIPAMENTO : <?= $_POST['apto'] ?? "NÃO APTO PARA OPERAR"?>!</div>
+            <div id="status2" <?= $color?>>STATUS DO EQUIPAMENTO : <?= $_POST['apto'] ?? "NÃO APTO PARA OPERAR"?>!</div>
         </section>
         <section id="ressalvas">
             <strong>Ressalvas:</strong> <?= isEmpty("Ressalvas", "Sem ressalvas!") ?>

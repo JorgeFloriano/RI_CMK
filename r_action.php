@@ -7,11 +7,11 @@
 
     if (isset($_POST["apto"])) {
         if ($_POST["apto"] == "NÃO APTO PARA OPERAR" || $_POST["apto"] == NULL || $_POST["apto"] == "") {
-            $color = "w3-text-red";
+            $color = "style='color: red;'";
         } else {
             $color = "";
         }
     } else {
-        $color = "w3-text-red";
+        $color = "style='color: red;'";
     }
 ?>

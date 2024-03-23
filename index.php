@@ -27,12 +27,10 @@
                     <tr><td>Prédio: <strong>P-80</strong></td><td>Setor: <strong>Montagem</strong></td><td>Área : <strong>Feeder</strong></td></tr>
                 </table>
                 <div id="legend">
-                    <p>
                         Legenda: 
                         <i class="fa fa-thumbs-up iconl" style="margin-left: 0px;"></i>Ok 
                         <i class="fa fa-wrench iconl"></i>Recuperar
                         <i class="fa fa-thumbs-down iconl"></i>Trocar
-                    </p>
                 </div>
             </section>
             <form id="form" action="relatorio.php" method="post">
@@ -44,9 +42,9 @@
                 <section id="trole" class="element">
                     TROLE - Capacidade: 500 kg
                 </section>
-                <?php opt('4','Motor (fixação e ruidos anormais)')?>
-                <?php opt('5','Freio (regular se necessário)')?>
-                <?php opt('6','Redutor (vazamento, nível de óleo)')?>
+                <?php opt('1','Rodas e rolamentos')?>
+                <?php opt('2','Fixação da talha e parafusos de fechamento')?>
+                <?php opt('3','Batentes fim de curso')?>
 
                 <section id="trole" class="element">
                     TALHA - Capacidade: 500 kg
@@ -111,13 +109,13 @@
                             <td>31-Alongam. - Med. 11 elos</td>
                             <td>248</td>
                             <td>253</td>
-                            <td><input class="medido" min="248.0" step="0.1" type="number" name="txt31" id="id31"></td>
+                            <td><input class="medido" min="0" step="0.1" type="number" name="txt31" id="id31"></td>
                         </tr>
                         <tr>
                             <td>32-Diâmetro médio do elo</td>
                             <td>7.4</td>
                             <td>6.7</td>
-                            <td><input class="medido" step="0.1" min="0" max="7.4" type="number" name="txt32" id="id32"></td>
+                            <td><input class="medido" step="0.1" min="0" type="number" name="txt32" id="id32"></td>
                         </tr>
                     </table>
                 </section>
@@ -135,17 +133,17 @@
                             <th>Medido</th>
                         </tr>
                         <tr>
-                            <td rowspan="3"><img src="Gancho.png" alt="figura do gancho" width="80px"></td>
+                            <td rowspan="3"><img src="gancho.jpg" alt="figura do gancho" width="80px"></td>
                             <td>33-Medida W1</td>
                             <td>41</td>
                             <td>45.1</td>
-                            <td><input class="medido" min="41.0" step="0.1" type="number" name="txt33" id="id33"></td>
+                            <td><input class="medido" min="0" step="0.1" type="number" name="txt33" id="id33"></td>
                         </tr>
                         <tr>
                             <td>34-Medida Y</td>
                             <td>28</td>
                             <td>23.6</td>
-                            <td><input class="medido" step="0.1" min="0" max="28.0" type="number" name="txt34" id="id34"></td>
+                            <td><input class="medido" step="0.1" min="0" type="number" name="txt34" id="id34"></td>
                         </tr>
                         <tr>
                             <td>35-Alinhamento</td>
@@ -425,7 +423,7 @@
                     </div>
                 </div>
 
-                <button onclick="unlockScreen(),limitDate('tec2data','tec2HI','tec2HF'),limitDate('tec1data','tec1HI','tec1HF')" type="submit" class="btn">CONFIRMA</button>
+                <button onclick="unlockScreen(),limitDate('tec2data','tec2HI','tec2HF'),limitDate('tec1data','tec1HI','tec1HF')" type="submit" class="btn" style="width: 100%;">CONFIRMA</button>
             </form>
             <script src="signature.js"></script>
             <script src="signature2.js"></script>

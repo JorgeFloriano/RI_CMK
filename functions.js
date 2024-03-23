@@ -13,6 +13,9 @@ function check(c1, ch, c2, u1, c3, u2, opt, obs, txt) {
    } if (opt == 'tr') {
       document.getElementById(obs).style.display = 'block';
       document.getElementById(txt).placeholder = "Razão da recomendação para substituição o ítem";
+      if (c1 == "i52T") {
+         document.getElementById(txt).value = "Substituir reparos da botoeira.";
+      }
    } if (opt == 're') {
       document.getElementById(obs).style.display = 'block';
       document.getElementById(txt).placeholder = "Razão da recomendação para reparação do ítem";
@@ -110,12 +113,20 @@ function getScrollHeight(elm){
    var date = document.getElementById(d);
    var hini = document.getElementById(hi);
    var hfin = document.getElementById(hf);
+   var z_left_h = "";
+   var z_left_m = "";
    dataAtual = new Date();
    const hor = dataAtual.getHours();
    const min = dataAtual.getMinutes();
    if (date.value == date.max) {
-      hini.max = hor + ":" + min;
-      hfin.max = hor + ":" + min;
+      if (hor < 10) {
+         z_left_h = "0";
+      }
+      if (min < 10) {
+         z_left_m = "0";
+      }
+      hini.max = z_left_h + hor + ":" + z_left_m + min;
+      hfin.max = z_left_h + hor + ":" + z_left_m + min;
    } else {
       hini.max = '';
       hfin.max = '';
